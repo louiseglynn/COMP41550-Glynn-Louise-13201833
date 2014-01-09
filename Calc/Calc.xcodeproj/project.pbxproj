@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF755630187D88D200F77AB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75562F187D88D200F77AB1 /* Foundation.framework */; };
+		EF755632187D88D200F77AB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF755631187D88D200F77AB1 /* CoreGraphics.framework */; };
+		EF755634187D88D200F77AB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF755633187D88D200F77AB1 /* UIKit.framework */; };
+		EF75563A187D88D200F77AB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF755638187D88D200F77AB1 /* InfoPlist.strings */; };
+		EF75563C187D88D200F77AB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF75563B187D88D200F77AB1 /* main.m */; };
+		EF755640187D88D200F77AB1 /* CalcAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF75563F187D88D200F77AB1 /* CalcAppDelegate.m */; };
+		EF755642187D88D200F77AB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF755641187D88D200F77AB1 /* Images.xcassets */; };
+		EF755649187D88D200F77AB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF755648187D88D200F77AB1 /* XCTest.framework */; };
+		EF75564A187D88D200F77AB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75562F187D88D200F77AB1 /* Foundation.framework */; };
+		EF75564B187D88D200F77AB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF755633187D88D200F77AB1 /* UIKit.framework */; };
+		EF755653187D88D200F77AB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF755651187D88D200F77AB1 /* InfoPlist.strings */; };
+		EF755655187D88D200F77AB1 /* CalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF755654187D88D200F77AB1 /* CalcTests.m */; };
+		EF755660187D897000F77AB1 /* CalcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF75565F187D897000F77AB1 /* CalcModel.m */; };
+		EF755662187D8ABB00F77AB1 /* CalcView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF755661187D8ABB00F77AB1 /* CalcView.xib */; };
+		EF755665187D8B6400F77AB1 /* CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF755664187D8B6400F77AB1 /* CalcViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF75564C187D88D200F77AB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF755624187D88D200F77AB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF75562B187D88D200F77AB1;
+			remoteInfo = Calc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF75562C187D88D200F77AB1 /* Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF75562F187D88D200F77AB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EF755631187D88D200F77AB1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EF755633187D88D200F77AB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EF755637187D88D200F77AB1 /* Calc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Calc-Info.plist"; sourceTree = "<group>"; };
+		EF755639187D88D200F77AB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EF75563B187D88D200F77AB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF75563D187D88D200F77AB1 /* Calc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calc-Prefix.pch"; sourceTree = "<group>"; };
+		EF75563E187D88D200F77AB1 /* CalcAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalcAppDelegate.h; sourceTree = "<group>"; };
+		EF75563F187D88D200F77AB1 /* CalcAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalcAppDelegate.m; sourceTree = "<group>"; };
+		EF755641187D88D200F77AB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EF755647187D88D200F77AB1 /* CalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF755648187D88D200F77AB1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EF755650187D88D200F77AB1 /* CalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalcTests-Info.plist"; sourceTree = "<group>"; };
+		EF755652187D88D200F77AB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EF755654187D88D200F77AB1 /* CalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalcTests.m; sourceTree = "<group>"; };
+		EF75565E187D897000F77AB1 /* CalcModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcModel.h; sourceTree = "<group>"; };
+		EF75565F187D897000F77AB1 /* CalcModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcModel.m; sourceTree = "<group>"; };
+		EF755661187D8ABB00F77AB1 /* CalcView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalcView.xib; sourceTree = "<group>"; };
+		EF755663187D8B6400F77AB1 /* CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcViewController.h; sourceTree = "<group>"; };
+		EF755664187D8B6400F77AB1 /* CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF755629187D88D200F77AB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF755632187D88D200F77AB1 /* CoreGraphics.framework in Frameworks */,
+				EF755634187D88D200F77AB1 /* UIKit.framework in Frameworks */,
+				EF755630187D88D200F77AB1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF755644187D88D200F77AB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF755649187D88D200F77AB1 /* XCTest.framework in Frameworks */,
+				EF75564B187D88D200F77AB1 /* UIKit.framework in Frameworks */,
+				EF75564A187D88D200F77AB1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF755623187D88D200F77AB1 = {
+			isa = PBXGroup;
+			children = (
+				EF755635187D88D200F77AB1 /* Calc */,
+				EF75564E187D88D200F77AB1 /* CalcTests */,
+				EF75562E187D88D200F77AB1 /* Frameworks */,
+				EF75562D187D88D200F77AB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF75562D187D88D200F77AB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF75562C187D88D200F77AB1 /* Calc.app */,
+				EF755647187D88D200F77AB1 /* CalcTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF75562E187D88D200F77AB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF75562F187D88D200F77AB1 /* Foundation.framework */,
+				EF755631187D88D200F77AB1 /* CoreGraphics.framework */,
+				EF755633187D88D200F77AB1 /* UIKit.framework */,
+				EF755648187D88D200F77AB1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF755635187D88D200F77AB1 /* Calc */ = {
+			isa = PBXGroup;
+			children = (
+				EF75565E187D897000F77AB1 /* CalcModel.h */,
+				EF75565F187D897000F77AB1 /* CalcModel.m */,
+				EF755663187D8B6400F77AB1 /* CalcViewController.h */,
+				EF755664187D8B6400F77AB1 /* CalcViewController.m */,
+				EF755661187D8ABB00F77AB1 /* CalcView.xib */,
+				EF755641187D88D200F77AB1 /* Images.xcassets */,
+				EF755636187D88D200F77AB1 /* Supporting Files */,
+			);
+			path = Calc;
+			sourceTree = "<group>";
+		};
+		EF755636187D88D200F77AB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF75563E187D88D200F77AB1 /* CalcAppDelegate.h */,
+				EF75563F187D88D200F77AB1 /* CalcAppDelegate.m */,
+				EF755637187D88D200F77AB1 /* Calc-Info.plist */,
+				EF755638187D88D200F77AB1 /* InfoPlist.strings */,
+				EF75563B187D88D200F77AB1 /* main.m */,
+				EF75563D187D88D200F77AB1 /* Calc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF75564E187D88D200F77AB1 /* CalcTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF755654187D88D200F77AB1 /* CalcTests.m */,
+				EF75564F187D88D200F77AB1 /* Supporting Files */,
+			);
+			path = CalcTests;
+			sourceTree = "<group>";
+		};
+		EF75564F187D88D200F77AB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF755650187D88D200F77AB1 /* CalcTests-Info.plist */,
+				EF755651187D88D200F77AB1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF75562B187D88D200F77AB1 /* Calc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF755658187D88D200F77AB1 /* Build configuration list for PBXNativeTarget "Calc" */;
+			buildPhases = (
+				EF755628187D88D200F77AB1 /* Sources */,
+				EF755629187D88D200F77AB1 /* Frameworks */,
+				EF75562A187D88D200F77AB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Calc;
+			productName = Calc;
+			productReference = EF75562C187D88D200F77AB1 /* Calc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF755646187D88D200F77AB1 /* CalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF75565B187D88D200F77AB1 /* Build configuration list for PBXNativeTarget "CalcTests" */;
+			buildPhases = (
+				EF755643187D88D200F77AB1 /* Sources */,
+				EF755644187D88D200F77AB1 /* Frameworks */,
+				EF755645187D88D200F77AB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF75564D187D88D200F77AB1 /* PBXTargetDependency */,
+			);
+			name = CalcTests;
+			productName = CalcTests;
+			productReference = EF755647187D88D200F77AB1 /* CalcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF755624187D88D200F77AB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Calc;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = comp41550;
+				TargetAttributes = {
+					EF755646187D88D200F77AB1 = {
+						TestTargetID = EF75562B187D88D200F77AB1;
+					};
+				};
+			};
+			buildConfigurationList = EF755627187D88D200F77AB1 /* Build configuration list for PBXProject "Calc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EF755623187D88D200F77AB1;
+			productRefGroup = EF75562D187D88D200F77AB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF75562B187D88D200F77AB1 /* Calc */,
+				EF755646187D88D200F77AB1 /* CalcTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF75562A187D88D200F77AB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF75563A187D88D200F77AB1 /* InfoPlist.strings in Resources */,
+				EF755662187D8ABB00F77AB1 /* CalcView.xib in Resources */,
+				EF755642187D88D200F77AB1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF755645187D88D200F77AB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF755653187D88D200F77AB1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF755628187D88D200F77AB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF75563C187D88D200F77AB1 /* main.m in Sources */,
+				EF755665187D8B6400F77AB1 /* CalcViewController.m in Sources */,
+				EF755640187D88D200F77AB1 /* CalcAppDelegate.m in Sources */,
+				EF755660187D897000F77AB1 /* CalcModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF755643187D88D200F77AB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF755655187D88D200F77AB1 /* CalcTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF75564D187D88D200F77AB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF75562B187D88D200F77AB1 /* Calc */;
+			targetProxy = EF75564C187D88D200F77AB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF755638187D88D200F77AB1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF755639187D88D200F77AB1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EF755651187D88D200F77AB1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF755652187D88D200F77AB1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF755656187D88D200F77AB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF755657187D88D200F77AB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF755659187D88D200F77AB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Calc/Calc-Prefix.pch";
+				INFOPLIST_FILE = "Calc/Calc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EF75565A187D88D200F77AB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Calc/Calc-Prefix.pch";
+				INFOPLIST_FILE = "Calc/Calc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EF75565C187D88D200F77AB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Calc.app/Calc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Calc/Calc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CalcTests/CalcTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EF75565D187D88D200F77AB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Calc.app/Calc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Calc/Calc-Prefix.pch";
+				INFOPLIST_FILE = "CalcTests/CalcTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF755627187D88D200F77AB1 /* Build configuration list for PBXProject "Calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF755656187D88D200F77AB1 /* Debug */,
+				EF755657187D88D200F77AB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF755658187D88D200F77AB1 /* Build configuration list for PBXNativeTarget "Calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF755659187D88D200F77AB1 /* Debug */,
+				EF75565A187D88D200F77AB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF75565B187D88D200F77AB1 /* Build configuration list for PBXNativeTarget "CalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF75565C187D88D200F77AB1 /* Debug */,
+				EF75565D187D88D200F77AB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF755624187D88D200F77AB1 /* Project object */;
+}
