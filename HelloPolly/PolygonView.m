@@ -57,6 +57,34 @@
 
 }
 
+- (void)drawRect:(CGRect)rect
+{
+    self.points = [self pointsForPolygonInRect:rect numberOfSides:3];
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
+    CGContextSetRGBFillColor(context, 0.0, 0.0, 1.0, 1.0);
+    
+    // Draw them with a 2.0 stroke width so they are a bit more visible.
+    CGContextSetLineWidth(context, 2.0);
+    
+    for(int idx = 0; idx < self.points.count; idx++)
+    {
+        
+        //NSLog(@self.points)
+        
+        //CGPointMake point = [self.points objectAtIndex:idx];//Edited
+        //if(idx == 0)
+        //{
+        // move to the first point
+        //  CGContextMoveToPoint(context, point.x, point.y);
+        //}
+        //else
+        //{
+        //  CGContextAddLineToPoint(context, point.x, point.y);
+    }
+}
 
 
 - (NSArray *)pointsForPolygonInRect:(CGRect)rect numberOfSides:(int)numberOfSides {
@@ -73,5 +101,6 @@
     }
     return result;
 }
+
 
 @end

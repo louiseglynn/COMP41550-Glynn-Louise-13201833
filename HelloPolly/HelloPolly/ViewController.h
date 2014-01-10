@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PolygonShape.h"
+#import "PolygonView.h"
 
 
 @interface ViewController : UIViewController
@@ -16,7 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *numberOfSidesLabel;
 
-@property (nonatomic)  NSArray *points;
+@property (strong, nonatomic) IBOutlet PolygonView *polygonView;
 
 - (IBAction)decrease:(id)sender;
 

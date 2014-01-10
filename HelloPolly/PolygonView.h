@@ -13,6 +13,7 @@
 
 @property (assign, nonatomic) int numberOfSides;
 @property (weak, nonatomic) IBOutlet PolygonShape *model;
+@property (nonatomic)  NSArray *points;
 
 @end
 
