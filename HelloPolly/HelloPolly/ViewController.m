@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 
-//@interface ViewController ()
+@interface ViewController () <PolycongViewDelegate>
 
-//@end
+@end
 
 @implementation ViewController
 
@@ -18,7 +18,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self.polygonView.delegate] = self;
     
+}
+
+- (NSArray) pointsInRect
+{
+    self.polygonShapeModel.pointsInRect;
 }
 
 - (void)dealloc
@@ -56,6 +62,9 @@
     NSLog(@"My Polygon %@", self.model.name);
    
 }
+
+
+
 
 
 @end

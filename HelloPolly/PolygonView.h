@@ -9,11 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "PolygonShape.h"
 
+@class PolygonView;
+
+@protocol PolycongViewDelegate <NSObject>
+
+- (NSArray *) pointsInRect:(CGRect)rect;
+
+@end
+
+
 @interface PolygonView : UIView
 
-@property (assign, nonatomic) int numberOfSides;
+@property (weak, nonatomic) IBOutlet id <PolycongViewDelegate> delegate;
 @property (weak, nonatomic) IBOutlet PolygonShape *model;
-@property (nonatomic)  NSArray *points;
+@property (strong, nonatomic)  NSArray *points;
 
 @end
 

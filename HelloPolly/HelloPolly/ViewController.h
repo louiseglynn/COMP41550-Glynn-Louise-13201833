@@ -13,11 +13,11 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet PolygonView *polygonView;
 @property (strong, nonatomic) IBOutlet PolygonShape *model;
 
 @property (weak, nonatomic) IBOutlet UILabel *numberOfSidesLabel;
 
-@property (strong, nonatomic) IBOutlet PolygonView *polygonView;
 
 - (IBAction)decrease:(id)sender;
 
