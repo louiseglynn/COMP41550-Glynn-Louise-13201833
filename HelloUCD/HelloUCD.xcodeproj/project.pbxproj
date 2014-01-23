@@ -464,6 +464,7 @@
 				FFA036D4187DEE92002BB49A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFA036D5187DEE92002BB49A /* Build configuration list for PBXNativeTarget "HelloUCDTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +473,7 @@
 				FFA036D7187DEE92002BB49A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
