@@ -35,6 +35,11 @@
     {
         self.operand = self.waitingOperand / self.operand;
     }
+    else if ([@"%" isEqualToString:self.waitingOperation])
+    {
+        self.operand = fmod(self.waitingOperand,  self.operand);
+    }
+
     
 }
 
@@ -50,16 +55,25 @@
     }
     else if ([operation isEqualToString:@"M+"])
     {
-        NSLog(@"M+");
+        //NSLog(@"M+");
         self.memoryNumber = self.memoryNumber + self.operand;
     }
     else if ([operation isEqualToString:@"M-"])
     {
-        NSLog(@"M+");
-        self.memoryNumber = self.memoryNumber + self.operand;
+        //NSLog(@"M-");
+        self.memoryNumber = self.memoryNumber - self.operand;
     }
-    else
-    
+    else if ([operation isEqualToString:@"Mr"])
+    {
+        //NSLog(@"Mr");
+        self.operand = self.memoryNumber;
+    }
+    else if ([operation isEqualToString:@"Mc"])
+    {
+        //NSLog(@"Mc");
+        self.memoryNumber = 0;
+    }
+        else
     {
         [self performWaitingOperation];
         self.waitingOperand = self.operand;

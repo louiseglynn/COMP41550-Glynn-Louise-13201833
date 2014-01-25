@@ -43,8 +43,9 @@
 
 - (void)digitPressed:(UIButton *)sender
 {
-    NSLog(@"operation pressed");
+    //NSLog(@"digit pressed");
     NSString *digit = sender.titleLabel.text;
+    
     if (self.isInTheMiddleOfEnteringANumber)
     {
         self.calcDisplay.text = [self.calcDisplay.text stringByAppendingString:digit];
@@ -58,7 +59,7 @@
 
 - (void)operationPressed:(UIButton *)sender
 {
-    NSLog(@"operation pressed");
+    //NSLog(@"operation pressed");
     if (self.isInTheMiddleOfEnteringANumber)
     {
         self.isInTheMiddleOfEnteringANumber = NO;

@@ -20,8 +20,8 @@
 		EF755653187D88D200F77AB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF755651187D88D200F77AB1 /* InfoPlist.strings */; };
 		EF755655187D88D200F77AB1 /* CalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF755654187D88D200F77AB1 /* CalcTests.m */; };
 		EF755660187D897000F77AB1 /* CalcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF75565F187D897000F77AB1 /* CalcModel.m */; };
-		EF755662187D8ABB00F77AB1 /* CalcView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF755661187D8ABB00F77AB1 /* CalcView.xib */; };
 		EF755665187D8B6400F77AB1 /* CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF755664187D8B6400F77AB1 /* CalcViewController.m */; };
+		FF64E9051892998300142525 /* CalcView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF64E9041892998300142525 /* CalcView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +53,9 @@
 		EF755654187D88D200F77AB1 /* CalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalcTests.m; sourceTree = "<group>"; };
 		EF75565E187D897000F77AB1 /* CalcModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcModel.h; sourceTree = "<group>"; };
 		EF75565F187D897000F77AB1 /* CalcModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcModel.m; sourceTree = "<group>"; };
-		EF755661187D8ABB00F77AB1 /* CalcView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalcView.xib; sourceTree = "<group>"; };
 		EF755663187D8B6400F77AB1 /* CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcViewController.h; sourceTree = "<group>"; };
 		EF755664187D8B6400F77AB1 /* CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcViewController.m; sourceTree = "<group>"; };
+		FF64E9041892998300142525 /* CalcView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalcView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +117,9 @@
 			children = (
 				EF75565E187D897000F77AB1 /* CalcModel.h */,
 				EF75565F187D897000F77AB1 /* CalcModel.m */,
+				FF64E9041892998300142525 /* CalcView.xib */,
 				EF755663187D8B6400F77AB1 /* CalcViewController.h */,
 				EF755664187D8B6400F77AB1 /* CalcViewController.m */,
-				EF755661187D8ABB00F77AB1 /* CalcView.xib */,
 				EF755641187D88D200F77AB1 /* Images.xcassets */,
 				EF755636187D88D200F77AB1 /* Supporting Files */,
 			);
@@ -234,7 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF75563A187D88D200F77AB1 /* InfoPlist.strings in Resources */,
-				EF755662187D8ABB00F77AB1 /* CalcView.xib in Resources */,
+				FF64E9051892998300142525 /* CalcView.xib in Resources */,
 				EF755642187D88D200F77AB1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +458,7 @@
 				EF75565A187D88D200F77AB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF75565B187D88D200F77AB1 /* Build configuration list for PBXNativeTarget "CalcTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +467,7 @@
 				EF75565D187D88D200F77AB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
