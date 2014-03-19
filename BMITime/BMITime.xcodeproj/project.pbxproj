@@ -1,0 +1,277 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF13ECF918D4B80D00A36375 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF13ECF818D4B80D00A36375 /* Foundation.framework */; };
+		FF13ECFC18D4B80D00A36375 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF13ECFB18D4B80D00A36375 /* main.m */; };
+		FF13ED0018D4B80D00A36375 /* BMITime.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF13ECFF18D4B80D00A36375 /* BMITime.1 */; };
+		FF13ED0818D4B83000A36375 /* BNRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = FF13ED0718D4B83000A36375 /* BNRPerson.m */; };
+		FF32B74C18D5AD9200909DAD /* BNREmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B74B18D5AD9200909DAD /* BNREmployee.m */; };
+		FF32B75518D5C40B00909DAD /* BNRAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B75418D5C40B00909DAD /* BNRAsset.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FF13ECF318D4B80D00A36375 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				FF13ED0018D4B80D00A36375 /* BMITime.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FF13ECF518D4B80D00A36375 /* BMITime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BMITime; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF13ECF818D4B80D00A36375 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FF13ECFB18D4B80D00A36375 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FF13ECFE18D4B80D00A36375 /* BMITime-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BMITime-Prefix.pch"; sourceTree = "<group>"; };
+		FF13ECFF18D4B80D00A36375 /* BMITime.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BMITime.1; sourceTree = "<group>"; };
+		FF13ED0618D4B83000A36375 /* BNRPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRPerson.h; sourceTree = "<group>"; };
+		FF13ED0718D4B83000A36375 /* BNRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRPerson.m; sourceTree = "<group>"; };
+		FF32B74A18D5AD9200909DAD /* BNREmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNREmployee.h; path = BMITime/BNREmployee.h; sourceTree = "<group>"; };
+		FF32B74B18D5AD9200909DAD /* BNREmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNREmployee.m; path = BMITime/BNREmployee.m; sourceTree = "<group>"; };
+		FF32B75318D5C40B00909DAD /* BNRAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRAsset.h; path = ../Stocks/Stocks/BNRAsset.h; sourceTree = "<group>"; };
+		FF32B75418D5C40B00909DAD /* BNRAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRAsset.m; path = ../Stocks/Stocks/BNRAsset.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF13ECF218D4B80D00A36375 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF13ECF918D4B80D00A36375 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF13ECEC18D4B80D00A36375 = {
+			isa = PBXGroup;
+			children = (
+				FF13ED0618D4B83000A36375 /* BNRPerson.h */,
+				FF32B75318D5C40B00909DAD /* BNRAsset.h */,
+				FF32B75418D5C40B00909DAD /* BNRAsset.m */,
+				FF13ED0718D4B83000A36375 /* BNRPerson.m */,
+				FF32B74A18D5AD9200909DAD /* BNREmployee.h */,
+				FF32B74B18D5AD9200909DAD /* BNREmployee.m */,
+				FF13ECFA18D4B80D00A36375 /* BMITime */,
+				FF13ECF718D4B80D00A36375 /* Frameworks */,
+				FF13ECF618D4B80D00A36375 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF13ECF618D4B80D00A36375 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF13ECF518D4B80D00A36375 /* BMITime */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF13ECF718D4B80D00A36375 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF13ECF818D4B80D00A36375 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF13ECFA18D4B80D00A36375 /* BMITime */ = {
+			isa = PBXGroup;
+			children = (
+				FF13ECFB18D4B80D00A36375 /* main.m */,
+				FF13ECFF18D4B80D00A36375 /* BMITime.1 */,
+				FF13ECFD18D4B80D00A36375 /* Supporting Files */,
+			);
+			path = BMITime;
+			sourceTree = "<group>";
+		};
+		FF13ECFD18D4B80D00A36375 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF13ECFE18D4B80D00A36375 /* BMITime-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF13ECF418D4B80D00A36375 /* BMITime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF13ED0318D4B80D00A36375 /* Build configuration list for PBXNativeTarget "BMITime" */;
+			buildPhases = (
+				FF13ECF118D4B80D00A36375 /* Sources */,
+				FF13ECF218D4B80D00A36375 /* Frameworks */,
+				FF13ECF318D4B80D00A36375 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BMITime;
+			productName = BMITime;
+			productReference = FF13ECF518D4B80D00A36375 /* BMITime */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF13ECED18D4B80D00A36375 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = ucd;
+			};
+			buildConfigurationList = FF13ECF018D4B80D00A36375 /* Build configuration list for PBXProject "BMITime" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FF13ECEC18D4B80D00A36375;
+			productRefGroup = FF13ECF618D4B80D00A36375 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF13ECF418D4B80D00A36375 /* BMITime */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF13ECF118D4B80D00A36375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF32B74C18D5AD9200909DAD /* BNREmployee.m in Sources */,
+				FF13ECFC18D4B80D00A36375 /* main.m in Sources */,
+				FF13ED0818D4B83000A36375 /* BNRPerson.m in Sources */,
+				FF32B75518D5C40B00909DAD /* BNRAsset.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FF13ED0118D4B80D00A36375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FF13ED0218D4B80D00A36375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FF13ED0418D4B80D00A36375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMITime/BMITime-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FF13ED0518D4B80D00A36375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMITime/BMITime-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF13ECF018D4B80D00A36375 /* Build configuration list for PBXProject "BMITime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF13ED0118D4B80D00A36375 /* Debug */,
+				FF13ED0218D4B80D00A36375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF13ED0318D4B80D00A36375 /* Build configuration list for PBXNativeTarget "BMITime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF13ED0418D4B80D00A36375 /* Debug */,
+				FF13ED0518D4B80D00A36375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF13ECED18D4B80D00A36375 /* Project object */;
+}

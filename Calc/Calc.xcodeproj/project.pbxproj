@@ -22,6 +22,7 @@
 		EF755660187D897000F77AB1 /* CalcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF75565F187D897000F77AB1 /* CalcModel.m */; };
 		EF755665187D8B6400F77AB1 /* CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF755664187D8B6400F77AB1 /* CalcViewController.m */; };
 		FF64E9051892998300142525 /* CalcView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF64E9041892998300142525 /* CalcView.xib */; };
+		FFF24C1F1896628B0092E2AB /* CalcView-landscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF24C1E1896628B0092E2AB /* CalcView-landscape.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		EF755663187D8B6400F77AB1 /* CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcViewController.h; sourceTree = "<group>"; };
 		EF755664187D8B6400F77AB1 /* CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcViewController.m; sourceTree = "<group>"; };
 		FF64E9041892998300142525 /* CalcView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalcView.xib; sourceTree = "<group>"; };
+		FFF24C1E1896628B0092E2AB /* CalcView-landscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CalcView-landscape.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				EF75565E187D897000F77AB1 /* CalcModel.h */,
 				EF75565F187D897000F77AB1 /* CalcModel.m */,
 				FF64E9041892998300142525 /* CalcView.xib */,
+				FFF24C1E1896628B0092E2AB /* CalcView-landscape.xib */,
 				EF755663187D8B6400F77AB1 /* CalcViewController.h */,
 				EF755664187D8B6400F77AB1 /* CalcViewController.m */,
 				EF755641187D88D200F77AB1 /* Images.xcassets */,
@@ -233,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF24C1F1896628B0092E2AB /* CalcView-landscape.xib in Resources */,
 				EF75563A187D88D200F77AB1 /* InfoPlist.strings in Resources */,
 				FF64E9051892998300142525 /* CalcView.xib in Resources */,
 				EF755642187D88D200F77AB1 /* Images.xcassets in Resources */,

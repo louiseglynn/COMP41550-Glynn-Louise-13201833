@@ -70,6 +70,8 @@
     self.calcDisplay.text = [NSString stringWithFormat:@"%g", result];
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -81,6 +83,8 @@
         view.layer.borderWidth = 0.5;
     }
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>40536CCF-A40A-453D-AF35-1BF86B5B982A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Stocks</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6EA79EFF-4139-4460-B296-EC7D5971CA1A</key>
+		<string>https://github.com/louiseglynn/COMP41550-Glynn-Louise-13201833.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Stocks/Stocks.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6EA79EFF-4139-4460-B296-EC7D5971CA1A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/louiseglynn/COMP41550-Glynn-Louise-13201833.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6EA79EFF-4139-4460-B296-EC7D5971CA1A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6EA79EFF-4139-4460-B296-EC7D5971CA1A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>COMP41550-Glynn-Louise-13201833</string>
+		</dict>
+	</array>
+</dict>
+</plist>
