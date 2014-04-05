@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FFB5285E187F2C420083A5AF"
+               BlueprintIdentifier = "FF29D44418EED2F0006A816D"
                BuildableName = "HelloPolly.app"
                BlueprintName = "HelloPolly"
                ReferencedContainer = "container:HelloPolly.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FFB5287F187F2C420083A5AF"
+               BlueprintIdentifier = "FF29D46518EED2F0006A816D"
                BuildableName = "HelloPollyTests.xctest"
                BlueprintName = "HelloPollyTests"
                ReferencedContainer = "container:HelloPolly.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FFB5285E187F2C420083A5AF"
+            BlueprintIdentifier = "FF29D44418EED2F0006A816D"
             BuildableName = "HelloPolly.app"
             BlueprintName = "HelloPolly"
             ReferencedContainer = "container:HelloPolly.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FFB5285E187F2C420083A5AF"
+            BlueprintIdentifier = "FF29D44418EED2F0006A816D"
             BuildableName = "HelloPolly.app"
             BlueprintName = "HelloPolly"
             ReferencedContainer = "container:HelloPolly.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FFB5285E187F2C420083A5AF"
+            BlueprintIdentifier = "FF29D44418EED2F0006A816D"
             BuildableName = "HelloPolly.app"
             BlueprintName = "HelloPolly"
             ReferencedContainer = "container:HelloPolly.xcodeproj">

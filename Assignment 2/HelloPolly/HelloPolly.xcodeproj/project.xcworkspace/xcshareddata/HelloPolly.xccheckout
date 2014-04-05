@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>3F449B0F-3C5E-4558-8A29-118AD06008AC</string>
+	<string>DA0E8C4A-56DE-459A-8A01-1A771F6AAE9C</string>
 	<key>IDESourceControlProjectName</key>
 	<string>HelloPolly</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>00DA51E8-E2B6-46EE-9AC0-3EDF0BAC4B51</key>
+		<key>7283B20B-A4B0-4625-B6C2-88750C8CC2E9</key>
 		<string>https://github.com/louiseglynn/COMP41550-Glynn-Louise-13201833.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>HelloPolly/HelloPolly.xcodeproj/project.xcworkspace</string>
+	<string>Assignment 2/HelloPolly/HelloPolly.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>00DA51E8-E2B6-46EE-9AC0-3EDF0BAC4B51</key>
-		<string>../../..</string>
+		<key>7283B20B-A4B0-4625-B6C2-88750C8CC2E9</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/louiseglynn/COMP41550-Glynn-Louise-13201833.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>00DA51E8-E2B6-46EE-9AC0-3EDF0BAC4B51</string>
+	<string>7283B20B-A4B0-4625-B6C2-88750C8CC2E9</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>00DA51E8-E2B6-46EE-9AC0-3EDF0BAC4B51</string>
+			<string>7283B20B-A4B0-4625-B6C2-88750C8CC2E9</string>
 			<key>IDESourceControlWCCName</key>
 			<string>COMP41550-Glynn-Louise-13201833</string>
 		</dict>

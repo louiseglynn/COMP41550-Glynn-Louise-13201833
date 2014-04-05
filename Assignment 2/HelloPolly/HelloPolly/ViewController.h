@@ -2,7 +2,7 @@
 //  ViewController.h
 //  HelloPolly
 //
-//  Created by CSI Student on 09/01/2014.
+//  Created by CSI Student on 04/04/2014.
 //  Copyright (c) 2014 ucd. All rights reserved.
 //
 
@@ -10,21 +10,25 @@
 #import "PolygonShape.h"
 #import "PolygonView.h"
 
-
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet PolygonView *polygonView;
-@property (strong, nonatomic) IBOutlet PolygonShape *polygonShapeModel;
-
 @property (weak, nonatomic) IBOutlet UILabel *numberOfSidesLabel;
+@property (strong, nonatomic) IBOutlet PolygonShape *model;
+@property (weak, nonatomic) IBOutlet UIButton *decreaseButton;
+@property (weak, nonatomic) IBOutlet UIButton *increaseButton;
+@property (strong, nonatomic) IBOutlet UIStepper *stepper;
+
+@property (strong, nonatomic) IBOutlet UILabel *shapeLabel;
 
 
-- (IBAction)decrease:(id)sender;
+@property (strong, nonatomic) IBOutlet PolygonView *polygon;
 
-- (IBAction)increase:(id)sender;
+
+
+
+-(IBAction)increase:(UIButton *)sender;
+-(IBAction)decrease:(UIButton *)sender;
+-(IBAction)change:(UIStepper *)sender;
+
 
 @end
-
-
-
-

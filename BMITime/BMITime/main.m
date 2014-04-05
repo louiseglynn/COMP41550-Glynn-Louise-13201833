@@ -20,6 +20,8 @@ int main(int argc, const char * argv[])
         //BNRPerson *mikey = [[BNRPerson alloc]init];
         BNREmployee *mikey = [[BNREmployee alloc]init];
         
+        NSMutableDictionary *executives = [[NSMutableDictionary alloc]init];
+        
         //[mikey setWeightInKilos:96];
         //[mikey setHeightInMetres:1.8];
         
@@ -36,6 +38,8 @@ int main(int argc, const char * argv[])
         
         [mikey addAsset:a1];
         [mikey removeAsset:a1];
+        
+    
         
         
         //NSLog(@"Mikey is %.2f meters tall and weighs %.2f kilograms, his BMI is: %.2f", [mikey heightInMetres], [mikey weightInKilos], [mikey bodyMassIndex]);

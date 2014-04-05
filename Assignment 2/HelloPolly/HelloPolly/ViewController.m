@@ -2,13 +2,13 @@
 //  ViewController.m
 //  HelloPolly
 //
-//  Created by CSI Student on 09/01/2014.
+//  Created by CSI Student on 04/04/2014.
 //  Copyright (c) 2014 ucd. All rights reserved.
 //
 
 #import "ViewController.h"
 
-@interface ViewController () <PolygonViewDelegate>
+@interface ViewController ()
 
 @end
 
@@ -18,53 +18,96 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self.polygonView.delegate] = self;
+    
+    self.stepper.maximumValue = 12;
+    self.stepper.minimumValue = 3;
+    
+    [self updateView];
+    
     
 }
 
-- (NSArray *)pointsInRect
+-(void)updateView
 {
-    self.polygonShapeModel.pointsInRect;
-}
-
-- (void)dealloc
-{
-    // Do any additional setup after loading the view, typically from a nib.
-    self.numberOfSidesLabel = nil;
-    self.model = nil;
-    //[super dealloc];
+    NSString *shapeText = [NSString stringWithFormat:@"%@", self.model.name];
+    NSString *text = [NSString stringWithFormat:@"%d", self.model.numberOfSides];
     
-    self.model.numberOfSides = [self.numberOfSidesLabel.text integerValue];
+    [self.shapeLabel setText:shapeText];
+    [self.shapeLabel sizeToFit];
+    [self.numberOfSidesLabel setText:text];
+    [self.numberOfSidesLabel sizeToFit];
+    self.stepper.value = self.model.numberOfSides;
+    self.polygon.numberOfSides = self.model.numberOfSides;
     
-}
+    //NSLog(@"@%@", self.model);
+    //NSLog(@"@%@", self.view);
+    //NSLog(@"@%@", self.polygon);
+    
+    
+    [self.polygon setNeedsDisplay];
 
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidUnload {
+    [self setNumberOfSidesLabel:nil];
+    [self setModel:nil];
+    [super viewDidUnload];
+}
+
+-(IBAction)increase:(UIButton *)sender{
     
+    [self increase];
+}
+
+-(void)increase{
+    if(self.model.numberOfSides < 12){
+        self.increaseButton.enabled = YES;
+        self.decreaseButton.enabled = YES;
+        self.model.numberOfSides++;
+        if(self.model.numberOfSides == 12){
+            self.increaseButton.enabled = NO;
+        }
+        NSLog(@"increase");
+    }
+    
+    [self updateView];
+}
+
+-(IBAction)decrease:(UIButton *)sender{
+    [self decrease];
     
 }
 
-- (IBAction)decrease:(UIButton *)sender {
-    NSLog(@"Decrease");
-    self.model.numberOfSides--;
-    self.numberOfSidesLabel.text = [NSString stringWithFormat:@"%d" , self.model.numberOfSides];
-    NSLog(@"My Polygon %@", self.model.name);
+-(void)decrease{
+    if(self.model.numberOfSides > 3){
+        self.increaseButton.enabled = YES;
+        self.decreaseButton.enabled = YES;
+        self.model.numberOfSides--;
+        if(self.model.numberOfSides == 3){
+            self.decreaseButton.enabled = NO;
+        }
+        NSLog(@"decrease");
+    }
     
+    [self updateView];
 }
 
-- (IBAction)increase:(UIButton *)sender {
-    NSLog(@"Increase");
-    self.model.numberOfSides++;
-    self.numberOfSidesLabel.text = [NSString stringWithFormat:@"%d" , self.model.numberOfSides];
-    NSLog(@"My Polygon %@", self.model.name);
-   
+-(IBAction)change:(UIStepper *)sender{
+    
+    if(sender.value > self.model.numberOfSides){
+        [self increase];
+    }
+    else{
+        [self decrease];
+    }
+    
+    NSLog(@"%f", sender.value);
 }
-
-
-
-
 
 @end
