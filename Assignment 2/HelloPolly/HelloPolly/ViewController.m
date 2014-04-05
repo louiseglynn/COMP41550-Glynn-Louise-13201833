@@ -37,7 +37,7 @@
     [self.numberOfSidesLabel setText:text];
     [self.numberOfSidesLabel sizeToFit];
     self.stepper.value = self.model.numberOfSides;
-    self.polygon.numberOfSides = self.model.numberOfSides;
+    self.polygon.points = [self.model pointsForPolygonInRect:self.polygon.frame numberOfSides:self.model.numberOfSides];
     
     //NSLog(@"@%@", self.model);
     //NSLog(@"@%@", self.view);

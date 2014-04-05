@@ -10,9 +10,6 @@
 
 @interface PolygonView : UIView
 
-@property (assign, nonatomic) int numberOfSides;
 @property (strong, nonatomic)  NSArray *points;
-
--(NSArray *)pointsForPolygonInRect:(CGRect)rect numberOfSides:(int)numberOfSides;
 
 @end
