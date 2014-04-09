@@ -43,7 +43,7 @@
     [self.sides setText:text];
     
     self.stepper.value = self.model.numberOfSides;
-    self.pv.points = [self.model pointsForPolygonInRect:self.pv.frame numberOfSides:self.model.numberOfSides];
+    self.pv.points = [PolygonShape pointsForPolygonInRect:self.pv.frame numberOfSides:self.model.numberOfSides];
     
     //NSLog(@"@%@", self.model);
     //NSLog(@"@%@", self.view);

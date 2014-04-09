@@ -14,6 +14,6 @@
 @property (readonly, weak) NSString *name;
 
 - (id)initWithNumberOfSides:(int)sides;
--(NSArray *)pointsForPolygonInRect:(CGRect)rect numberOfSides:(int)numberOfSides;
++(NSArray *)pointsForPolygonInRect:(CGRect)rect numberOfSides:(int)numberOfSides;
 
 @end

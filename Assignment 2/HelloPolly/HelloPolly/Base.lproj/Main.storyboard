@@ -77,14 +77,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="PcG-ya-izx" secondAttribute="centerY" id="4T4-Hj-xla"/>
-                            <constraint firstAttribute="centerX" secondItem="PcG-ya-izx" secondAttribute="centerX" id="8N4-rh-GBv"/>
+                            <constraint firstAttribute="centerX" secondItem="PcG-ya-izx" secondAttribute="centerX" id="6od-os-uzb"/>
                             <constraint firstItem="VmV-Li-RLL" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="49" id="H3U-eg-bIG"/>
                             <constraint firstItem="d9T-Ht-zJd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="J1I-sl-Hk4"/>
                             <constraint firstAttribute="trailing" secondItem="az0-Bb-3ty" secondAttribute="trailing" constant="51" id="PvC-bk-Ty7"/>
                             <constraint firstItem="z4g-sV-MIa" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" id="SUj-1j-ged"/>
                             <constraint firstItem="d9T-Ht-zJd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="49" id="Szw-5g-rMo"/>
                             <constraint firstItem="h4C-31-alm" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" id="Vwf-fR-3AG"/>
+                            <constraint firstAttribute="centerY" secondItem="PcG-ya-izx" secondAttribute="centerY" id="deO-P8-Mxa"/>
                             <constraint firstItem="nfX-6m-6iW" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="49" id="esM-f0-cPL"/>
                             <constraint firstAttribute="trailing" secondItem="nfX-6m-6iW" secondAttribute="trailing" constant="20" id="iPd-f1-G7x"/>
                             <constraint firstAttribute="centerX" secondItem="VmV-Li-RLL" secondAttribute="centerX" id="rRa-87-fG3"/>
