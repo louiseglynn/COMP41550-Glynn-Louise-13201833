@@ -68,6 +68,7 @@ static const int MIN_SIDES = 3;
 }
 
 -(NSArray *)pointsForPolygonInRect:(CGRect)rect numberOfSides:(int)numberOfSides {
+    NSLog(@"points for Polygon");
     CGPoint center = CGPointMake(rect.size.width / 2.0, rect.size.height / 2.0);
     float radius = 0.9 * center.x;
     NSMutableArray *result = [NSMutableArray array];
