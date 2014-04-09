@@ -19,13 +19,19 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of sides" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4g-sV-MIa">
                                 <rect key="frame" x="44" y="141" width="127" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shape" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4C-31-alm">
-                                <rect key="frame" x="82" y="83" width="50" height="21"/>
+                                <rect key="frame" x="82" y="84" width="50" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -52,6 +58,9 @@
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="VmV-Li-RLL">
                                 <rect key="frame" x="105" y="193" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="stepperButton:" destination="vXZ-lx-hvc" eventType="valueChanged" id="gSv-h2-xV9"/>
+                                </connections>
                             </stepper>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PcG-ya-izx" customClass="PolygonView">
                                 <rect key="frame" x="72" y="231" width="160" height="284"/>
@@ -62,10 +71,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="decreaseButton" destination="d9T-Ht-zJd" id="Cn1-Vz-9UW"/>
+                        <outlet property="increaseButton" destination="nfX-6m-6iW" id="oFm-Sk-9kl"/>
                         <outlet property="model" destination="3Gh-fd-sH4" id="AID-75-TS2"/>
                         <outlet property="pv" destination="PcG-ya-izx" id="h3B-Dp-f2q"/>
                         <outlet property="shape" destination="h4C-31-alm" id="OFA-WL-FYE"/>
                         <outlet property="sides" destination="z4g-sV-MIa" id="VZx-zd-yKM"/>
+                        <outlet property="stepper" destination="VmV-Li-RLL" id="W1I-cs-f8l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

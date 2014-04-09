@@ -20,8 +20,12 @@
 
 @property (strong, nonatomic) IBOutlet PolygonView *pv;
 
+@property (strong, nonatomic) IBOutlet UIStepper *stepper;
+@property (strong, nonatomic) IBOutlet UIButton *decreaseButton;
+@property (strong, nonatomic) IBOutlet UIButton *increaseButton;
 
 - (IBAction)decrease:(UIButton *)sender;
 - (IBAction)increase:(UIButton *)sender;
+- (IBAction)stepperButton:(UIStepper *)sender;
 
 @end

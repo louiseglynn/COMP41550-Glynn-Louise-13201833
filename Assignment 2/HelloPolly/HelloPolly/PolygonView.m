@@ -38,10 +38,10 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextBeginPath(context);
     
-    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor); //C
+    //CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor); //C
     //[[UIColor redColor] setStroke]; //ObC
     
-    CGContextSetRGBFillColor(context, 0.0, 0.0, 1.0, 1.0); //C
+    //CGContextSetRGBFillColor(context, 0.0, 0.0, 1.0, 1.0); //C
     //[[UIColor greenColor] setFill]; //ObC
     
     
