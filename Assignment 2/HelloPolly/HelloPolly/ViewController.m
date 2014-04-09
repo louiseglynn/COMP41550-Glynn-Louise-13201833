@@ -54,11 +54,11 @@
     
 }
 
-
+/*Deprecated!!
 - (void)viewDidUnload {
     //[self setNumberOfSidesLabel:nil];
     //[self setModel:nil];
-    //[super viewDidUnload];
+    
     
     self.shape = nil;
     self.sides = nil;
@@ -68,6 +68,7 @@
     
     [super viewDidUnload];
 }
+*/
 
 - (void)didReceiveMemoryWarning
 {
