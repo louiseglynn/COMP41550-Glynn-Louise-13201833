@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>39AC4D37-9597-4904-96D3-6CBECB6047F2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Hypnotiser</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9F08FA23-6E57-4E41-8F47-CC12778B16E2</key>
+		<string>https://github.com/louiseglynn/COMP41550-Glynn-Louise-13201833.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hypnotiser/Hypnotiser.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9F08FA23-6E57-4E41-8F47-CC12778B16E2</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/louiseglynn/COMP41550-Glynn-Louise-13201833.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9F08FA23-6E57-4E41-8F47-CC12778B16E2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9F08FA23-6E57-4E41-8F47-CC12778B16E2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>COMP41550-Glynn-Louise-13201833</string>
+		</dict>
+	</array>
+</dict>
+</plist>
