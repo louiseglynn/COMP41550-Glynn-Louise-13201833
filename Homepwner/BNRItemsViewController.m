@@ -34,15 +34,25 @@
 
 -(IBAction)addNewItem:(id)sender
 {
+    
     BNRItem *item = [[BNRItem alloc]initWithName:@"Test" andNumber:@"1234567"];
     
    [[BNRItemStore sharedStore]createItem:item];
     
-    NSInteger lastRow = [[[BNRItemStore sharedStore]allItems]indexOfObject:item];
+   // NSInteger lastRow = [[[BNRItemStore sharedStore]allItems]indexOfObject:item];
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:lastRow inSection:0];
+   // NSIndexPath *indexPath = [NSIndexPath indexPathForItem:lastRow inSection:0];
     
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+   // [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+    
+    
+    BNRDetailViewController *dvc = [[BNRDetailViewController alloc]initForNewItem:YES];
+    
+    dvc.item = item;
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:dvc];
+    
+    [self presentViewController:navController animated:YES completion:nil];
+
 }
 
 /*
@@ -150,7 +160,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    BNRDetailViewController *dvc = [[BNRDetailViewController alloc]init];
+    BNRDetailViewController *dvc = [[BNRDetailViewController alloc]initForNewItem:NO];
     
     NSArray *items = [[BNRItemStore sharedStore]allItems];
     BNRItem *item = items[indexPath.row];

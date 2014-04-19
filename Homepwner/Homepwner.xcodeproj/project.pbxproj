@@ -28,6 +28,7 @@
 		FFF10D1218FFF3C300BEDA04 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF10D1118FFF3C300BEDA04 /* HeaderView.xib */; };
 		FFFD0F7019001B4300511656 /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFD0F6E19001B4300511656 /* BNRDetailViewController.m */; };
 		FFFD0F7119001B4300511656 /* BNRDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFD0F6F19001B4300511656 /* BNRDetailViewController.xib */; };
+		FFFEE6AC19014EFA00876B3D /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFEE6AB19014EFA00876B3D /* BNRImageStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		FFFD0F6D19001B4300511656 /* BNRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRDetailViewController.h; path = ../BNRDetailViewController.h; sourceTree = "<group>"; };
 		FFFD0F6E19001B4300511656 /* BNRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRDetailViewController.m; path = ../BNRDetailViewController.m; sourceTree = "<group>"; };
 		FFFD0F6F19001B4300511656 /* BNRDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BNRDetailViewController.xib; path = ../BNRDetailViewController.xib; sourceTree = "<group>"; };
+		FFFEE6AA19014EFA00876B3D /* BNRImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageStore.h; sourceTree = "<group>"; };
+		FFFEE6AB19014EFA00876B3D /* BNRImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 			children = (
 				FFFD0F6D19001B4300511656 /* BNRDetailViewController.h */,
 				FFFD0F6E19001B4300511656 /* BNRDetailViewController.m */,
+				FFFEE6AA19014EFA00876B3D /* BNRImageStore.h */,
+				FFFEE6AB19014EFA00876B3D /* BNRImageStore.m */,
 				FFFD0F6F19001B4300511656 /* BNRDetailViewController.xib */,
 				FFF10D0F18FFE74000BEDA04 /* BNRItem.m */,
 				FFF10D1318FFFBE400BEDA04 /* BNRItem.h */,
@@ -281,6 +286,7 @@
 				FFF10D1018FFE74000BEDA04 /* BNRItem.m in Sources */,
 				FF974D1218F8668700EBDD78 /* Homepwner.xcdatamodeld in Sources */,
 				FFFD0F7019001B4300511656 /* BNRDetailViewController.m in Sources */,
+				FFFEE6AC19014EFA00876B3D /* BNRImageStore.m in Sources */,
 				FF974D3318F866A200EBDD78 /* BNRItemsViewController.m in Sources */,
 				FF974D0F18F8668700EBDD78 /* BNRAppDelegate.m in Sources */,
 				FF974D3918F86D4A00EBDD78 /* BNRItemStore.m in Sources */,
@@ -405,7 +411,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Homepwner/Homepwner-Prefix.pch";
 				INFOPLIST_FILE = "Homepwner/Homepwner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -418,7 +426,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Homepwner/Homepwner-Prefix.pch";
 				INFOPLIST_FILE = "Homepwner/Homepwner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -19,6 +19,10 @@
     self.name = name;
     self.number = number;
     
+    NSUUID *uuid = [[NSUUID alloc]init];
+    NSString *key = [uuid UUIDString];
+    _imageKey = key;
+    
     return self;
 }
 

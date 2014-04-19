@@ -12,6 +12,7 @@
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *number;
+@property (nonatomic) NSString *imageKey;
 
 -(instancetype)initWithName:(NSString *)name andNumber:(NSString *)number;
 
