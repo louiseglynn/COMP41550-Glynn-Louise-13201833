@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Photo.h"
 
 @interface PhotoVC : UIViewController
 
 @property (nonatomic, strong) NSURL *photoURL;
 
+- (void)setPhotoURL:(NSURL *)photoURL setDict:(NSDictionary *)dict;
 @end

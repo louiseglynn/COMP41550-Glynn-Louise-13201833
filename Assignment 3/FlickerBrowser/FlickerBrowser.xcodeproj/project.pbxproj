@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FF11D03519041E7A00C2A1C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF11D03419041E7A00C2A1C3 /* MapKit.framework */; };
+		FF11D03A1904388300C2A1C3 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF11D0371904388300C2A1C3 /* CoreDataTableViewController.m */; };
+		FF11D03B1904388300C2A1C3 /* Photo+Flickr.m in Sources */ = {isa = PBXBuildFile; fileRef = FF11D0391904388300C2A1C3 /* Photo+Flickr.m */; };
+		FF11D04119043A8000C2A1C3 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = FF11D04019043A8000C2A1C3 /* Photo.m */; };
+		FF11D04719043C5200C2A1C3 /* FavoritesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FF11D04619043C5200C2A1C3 /* FavoritesTVC.m */; };
 		FF444E8C19019D860053CF2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF444E8B19019D860053CF2F /* Foundation.framework */; };
 		FF444E8E19019D860053CF2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF444E8D19019D860053CF2F /* CoreGraphics.framework */; };
 		FF444E9019019D860053CF2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF444E8F19019D860053CF2F /* UIKit.framework */; };
@@ -44,6 +48,14 @@
 
 /* Begin PBXFileReference section */
 		FF11D03419041E7A00C2A1C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FF11D0361904388300C2A1C3 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		FF11D0371904388300C2A1C3 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		FF11D0381904388300C2A1C3 /* Photo+Flickr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+Flickr.h"; sourceTree = "<group>"; };
+		FF11D0391904388300C2A1C3 /* Photo+Flickr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+Flickr.m"; sourceTree = "<group>"; };
+		FF11D03F19043A8000C2A1C3 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		FF11D04019043A8000C2A1C3 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		FF11D04519043C5200C2A1C3 /* FavoritesTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoritesTVC.h; path = ../FavoritesTVC.h; sourceTree = "<group>"; };
+		FF11D04619043C5200C2A1C3 /* FavoritesTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoritesTVC.m; path = ../FavoritesTVC.m; sourceTree = "<group>"; };
 		FF444E8819019D860053CF2F /* FlickerBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickerBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF444E8B19019D860053CF2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FF444E8D19019D860053CF2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,10 +153,16 @@
 		FF444E9319019D860053CF2F /* FlickerBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				FF11D04519043C5200C2A1C3 /* FavoritesTVC.h */,
+				FF11D04619043C5200C2A1C3 /* FavoritesTVC.m */,
 				FF444EDD19019ED20053CF2F /* Annotation.h */,
 				FF444EDE19019ED20053CF2F /* Annotation.m */,
 				FF444EDF19019ED20053CF2F /* FlickrAPIKey.h */,
 				FF444EE019019ED20053CF2F /* FlickrFetcher.h */,
+				FF11D0361904388300C2A1C3 /* CoreDataTableViewController.h */,
+				FF11D0371904388300C2A1C3 /* CoreDataTableViewController.m */,
+				FF11D0381904388300C2A1C3 /* Photo+Flickr.h */,
+				FF11D0391904388300C2A1C3 /* Photo+Flickr.m */,
 				FF444EE119019ED20053CF2F /* FlickrFetcher.m */,
 				FF444EE219019ED20053CF2F /* MapVC.h */,
 				FF444EE319019ED20053CF2F /* MapVC.m */,
@@ -158,6 +176,8 @@
 				FF444E9D19019D860053CF2F /* LGAppDelegate.m */,
 				FF444EA219019D860053CF2F /* Images.xcassets */,
 				FF444E9F19019D860053CF2F /* FlickerBrowser.xcdatamodeld */,
+				FF11D03F19043A8000C2A1C3 /* Photo.h */,
+				FF11D04019043A8000C2A1C3 /* Photo.m */,
 				FF444E9419019D860053CF2F /* Supporting Files */,
 			);
 			path = FlickerBrowser;
@@ -289,10 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF11D04119043A8000C2A1C3 /* Photo.m in Sources */,
+				FF11D03B1904388300C2A1C3 /* Photo+Flickr.m in Sources */,
 				FF444E9A19019D860053CF2F /* main.m in Sources */,
 				FF444EA119019D860053CF2F /* FlickerBrowser.xcdatamodeld in Sources */,
 				FF444EEA19019ED20053CF2F /* Annotation.m in Sources */,
+				FF11D04719043C5200C2A1C3 /* FavoritesTVC.m in Sources */,
 				FF444EEC19019ED20053CF2F /* MapVC.m in Sources */,
+				FF11D03A1904388300C2A1C3 /* CoreDataTableViewController.m in Sources */,
 				FF444EED19019ED20053CF2F /* PhotosTVC.m in Sources */,
 				FF444EEB19019ED20053CF2F /* FlickrFetcher.m in Sources */,
 				FF444EEF19019ED20053CF2F /* TagsTVC.m in Sources */,

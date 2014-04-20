@@ -8,15 +8,47 @@
 
 #import "PhotoVC.h"
 #import "FlickrFetcher.h"
+#import "LGAppDelegate.h"
+#import "Photo+Flickr.h"
+
 
 @interface PhotoVC ()
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) NSDictionary *dict;
+@property (nonatomic, strong) NSManagedObjectContext *context;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+
 @end
 
 @implementation PhotoVC
 
-- (void)setPhotoURL:(NSURL *)photoURL
+- (NSManagedObjectContext *)context
 {
+    if (!_context)
+    {
+        _context = ((LGAppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+    }
+    return _context;
+}
+
+- (IBAction)saveToFavs:(id)sender {
+
+    
+    [Photo photoWithDict:self.dict inManagedObjectContext:self.context];
+
+}
+
+
+- (void)setPhotoURL:(NSURL *)photoURL setDict:(NSDictionary *)dict
+{
+    if(dict){
+        _dict = dict;
+        _saveButton.enabled = true;
+    }
+    else{
+        _saveButton.enabled = false;
+    }
+    
     _photoURL = photoURL;
     
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -35,6 +67,16 @@
             });
         }
     }];
+    
+
+
+    
 }
+
+
+
+
+
+
 
 @end

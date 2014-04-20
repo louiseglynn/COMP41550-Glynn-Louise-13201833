@@ -90,9 +90,13 @@
     {
         UITableViewCell *cell =  (UITableViewCell *)sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        [segue.destinationViewController setPhotoURL:[FlickrFetcher urlForPhoto:self.photos[indexPath.row] format:FlickrPhotoFormatMedium640]];
+ 
+        [segue.destinationViewController setPhotoURL:[FlickrFetcher urlForPhoto:self.photos[indexPath.row] format:FlickrPhotoFormatMedium640] setDict:self.photos[indexPath.row]];
+  
         [segue.destinationViewController navigationItem].title = cell.textLabel.text;
     }
+    
+
 }
 
 @end
