@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF11D03519041E7A00C2A1C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF11D03419041E7A00C2A1C3 /* MapKit.framework */; };
 		FF444E8C19019D860053CF2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF444E8B19019D860053CF2F /* Foundation.framework */; };
 		FF444E8E19019D860053CF2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF444E8D19019D860053CF2F /* CoreGraphics.framework */; };
 		FF444E9019019D860053CF2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF444E8F19019D860053CF2F /* UIKit.framework */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF11D03419041E7A00C2A1C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FF444E8819019D860053CF2F /* FlickerBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickerBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF444E8B19019D860053CF2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FF444E8D19019D860053CF2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +85,7 @@
 			files = (
 				FF444E8E19019D860053CF2F /* CoreGraphics.framework in Frameworks */,
 				FF444E9219019D860053CF2F /* CoreData.framework in Frameworks */,
+				FF11D03519041E7A00C2A1C3 /* MapKit.framework in Frameworks */,
 				FF444E9019019D860053CF2F /* UIKit.framework in Frameworks */,
 				FF444E8C19019D860053CF2F /* Foundation.framework in Frameworks */,
 			);
@@ -125,6 +128,7 @@
 		FF444E8A19019D860053CF2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF11D03419041E7A00C2A1C3 /* MapKit.framework */,
 				FF444E8B19019D860053CF2F /* Foundation.framework */,
 				FF444E8D19019D860053CF2F /* CoreGraphics.framework */,
 				FF444E8F19019D860053CF2F /* UIKit.framework */,
@@ -494,6 +498,7 @@
 				FF444EBC19019D870053CF2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF444EBD19019D870053CF2F /* Build configuration list for PBXNativeTarget "FlickerBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +507,7 @@
 				FF444EBF19019D870053CF2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

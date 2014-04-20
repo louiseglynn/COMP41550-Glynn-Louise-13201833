@@ -30,11 +30,15 @@
 
 - (IBAction)dismissModalView:(id)sender
 {
+    NSLog(@"dismiss modal view");
+    
     [self.delegate mapVCDelegate:self didSelectLocation:self.annotation.coordinate];
 }
 
 - (IBAction)dropPin:(UITapGestureRecognizer *)gestureRecognizer
 {
+    
+    NSLog(@"pin dropped");
     CGPoint location = [gestureRecognizer locationInView:self.mapView];
     CLLocationCoordinate2D touchMapCoordinate = [self.mapView convertPoint:location toCoordinateFromView:self.mapView];
     

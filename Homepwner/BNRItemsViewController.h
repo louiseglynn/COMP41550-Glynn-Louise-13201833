@@ -11,6 +11,6 @@
 
 
 
-@interface BNRItemsViewController : UITableViewController
+@interface BNRItemsViewController : UITableViewController 
 
 @end

@@ -19,8 +19,10 @@
 @property (nonatomic, readonly) NSArray *allItems;
 
 +(instancetype)sharedStore;
--(void)createItem:(BNRItem *)item;
+//-(void)createItem:(BNRItem *)item;
+-(BNRItem *)createItem;
 -(void)removeItem:(BNRItem *)item;
 -(void)moveItemAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
+-(BOOL)saveChanges;
 
 @end

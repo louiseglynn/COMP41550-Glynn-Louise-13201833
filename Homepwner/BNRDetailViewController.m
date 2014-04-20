@@ -19,9 +19,28 @@
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
+
+
 @end
 
+
+
 @implementation BNRDetailViewController
+
+-(void)updateFonts{
+    
+    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    
+    self.nameLabel.font = font;
+    self.numberLabel.font = font;
+    
+    self.nameField.font = font;
+    self.numberField.font = font;
+    
+}
+
 
 -(void)save:(id)sender{
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
@@ -41,6 +60,11 @@
     self = [super initWithNibName:nil bundle:nil];
     
     if(self){
+        
+        self.restorationIdentifier = NSStringFromClass([self class]);
+        self.restorationClass = [self class];
+
+        
         if(isNew){
             
             UIBarButtonItem *doneItem =  [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(save:)];
@@ -51,8 +75,16 @@
             
             self.navigationItem.leftBarButtonItem = cancelItem;
         }
+        
+        NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+        [defaultCenter addObserver:self selector:@selector(updateFonts) name:UIContentSizeCategoryDidChangeNotification object:nil];
     }
     return self;
+}
+
+-(void)dealloc{
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter removeObserver:self];
 }
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -135,11 +167,13 @@
     self.nameField.text = item.name;
     self.numberField.text = item.number;
     
-    NSString  *key = self.item.imageKey;
+    NSString  *key = item.imageKey;
     
     UIImage *imageToDisplay = [[BNRImageStore sharedStore]imageForKey:key];
     
     self.imageView.image = imageToDisplay;
+    
+    [self updateFonts];
     
 }
 
@@ -161,6 +195,7 @@
     [textField resignFirstResponder];
     return YES;
 }
+
 
 
 @end

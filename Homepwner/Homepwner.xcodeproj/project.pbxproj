@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF5236231902ED8100F5B937 /* Homepwner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF5236211902ED8100F5B937 /* Homepwner.xcdatamodeld */; };
+		FF5236261902EE9100F5B937 /* BNRImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5236251902EE9100F5B937 /* BNRImageTransformer.m */; };
+		FF5236291902F24700F5B937 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5236281902F24700F5B937 /* BNRItem.m */; };
 		FF974CFD18F8668700EBDD78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF974CFC18F8668700EBDD78 /* Foundation.framework */; };
 		FF974CFF18F8668700EBDD78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF974CFE18F8668700EBDD78 /* CoreGraphics.framework */; };
 		FF974D0118F8668700EBDD78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF974D0018F8668700EBDD78 /* UIKit.framework */; };
@@ -14,7 +17,6 @@
 		FF974D0918F8668700EBDD78 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF974D0718F8668700EBDD78 /* InfoPlist.strings */; };
 		FF974D0B18F8668700EBDD78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF974D0A18F8668700EBDD78 /* main.m */; };
 		FF974D0F18F8668700EBDD78 /* BNRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF974D0E18F8668700EBDD78 /* BNRAppDelegate.m */; };
-		FF974D1218F8668700EBDD78 /* Homepwner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF974D1018F8668700EBDD78 /* Homepwner.xcdatamodeld */; };
 		FF974D1418F8668700EBDD78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF974D1318F8668700EBDD78 /* Images.xcassets */; };
 		FF974D1B18F8668700EBDD78 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF974D1A18F8668700EBDD78 /* XCTest.framework */; };
 		FF974D1C18F8668700EBDD78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF974CFC18F8668700EBDD78 /* Foundation.framework */; };
@@ -24,7 +26,6 @@
 		FF974D2818F8668700EBDD78 /* HomepwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF974D2718F8668700EBDD78 /* HomepwnerTests.m */; };
 		FF974D3318F866A200EBDD78 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF974D3218F866A200EBDD78 /* BNRItemsViewController.m */; };
 		FF974D3918F86D4A00EBDD78 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FF974D3818F86D4A00EBDD78 /* BNRItemStore.m */; };
-		FFF10D1018FFE74000BEDA04 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF10D0F18FFE74000BEDA04 /* BNRItem.m */; };
 		FFF10D1218FFF3C300BEDA04 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF10D1118FFF3C300BEDA04 /* HeaderView.xib */; };
 		FFFD0F7019001B4300511656 /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFD0F6E19001B4300511656 /* BNRDetailViewController.m */; };
 		FFFD0F7119001B4300511656 /* BNRDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFD0F6F19001B4300511656 /* BNRDetailViewController.xib */; };
@@ -42,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF5236221902ED8100F5B937 /* Homepwner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homepwner.xcdatamodel; sourceTree = "<group>"; };
+		FF5236241902EE9100F5B937 /* BNRImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageTransformer.h; sourceTree = "<group>"; };
+		FF5236251902EE9100F5B937 /* BNRImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageTransformer.m; sourceTree = "<group>"; };
+		FF5236271902F24700F5B937 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
+		FF5236281902F24700F5B937 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 		FF974CF918F8668700EBDD78 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF974CFC18F8668700EBDD78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FF974CFE18F8668700EBDD78 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,7 +59,6 @@
 		FF974D0C18F8668700EBDD78 /* Homepwner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Homepwner-Prefix.pch"; sourceTree = "<group>"; };
 		FF974D0D18F8668700EBDD78 /* BNRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRAppDelegate.h; sourceTree = "<group>"; };
 		FF974D0E18F8668700EBDD78 /* BNRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRAppDelegate.m; sourceTree = "<group>"; };
-		FF974D1118F8668700EBDD78 /* Homepwner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homepwner.xcdatamodel; sourceTree = "<group>"; };
 		FF974D1318F8668700EBDD78 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FF974D1918F8668700EBDD78 /* HomepwnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomepwnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF974D1A18F8668700EBDD78 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -64,9 +69,7 @@
 		FF974D3218F866A200EBDD78 /* BNRItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRItemsViewController.m; path = ../BNRItemsViewController.m; sourceTree = "<group>"; };
 		FF974D3718F86D4A00EBDD78 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		FF974D3818F86D4A00EBDD78 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
-		FFF10D0F18FFE74000BEDA04 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRItem.m; path = ../BNRItem.m; sourceTree = "<group>"; };
 		FFF10D1118FFF3C300BEDA04 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
-		FFF10D1318FFFBE400BEDA04 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRItem.h; path = ../BNRItem.h; sourceTree = "<group>"; };
 		FFFD0F6D19001B4300511656 /* BNRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRDetailViewController.h; path = ../BNRDetailViewController.h; sourceTree = "<group>"; };
 		FFFD0F6E19001B4300511656 /* BNRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRDetailViewController.m; path = ../BNRDetailViewController.m; sourceTree = "<group>"; };
 		FFFD0F6F19001B4300511656 /* BNRDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BNRDetailViewController.xib; path = ../BNRDetailViewController.xib; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 		FF974CF018F8668700EBDD78 = {
 			isa = PBXGroup;
 			children = (
+				FF5236271902F24700F5B937 /* BNRItem.h */,
+				FF5236281902F24700F5B937 /* BNRItem.m */,
 				FF974D0418F8668700EBDD78 /* Homepwner */,
 				FF974D2118F8668700EBDD78 /* HomepwnerTests */,
 				FF974CFB18F8668700EBDD78 /* Frameworks */,
@@ -139,8 +144,9 @@
 				FFFEE6AA19014EFA00876B3D /* BNRImageStore.h */,
 				FFFEE6AB19014EFA00876B3D /* BNRImageStore.m */,
 				FFFD0F6F19001B4300511656 /* BNRDetailViewController.xib */,
-				FFF10D0F18FFE74000BEDA04 /* BNRItem.m */,
-				FFF10D1318FFFBE400BEDA04 /* BNRItem.h */,
+				FF5236211902ED8100F5B937 /* Homepwner.xcdatamodeld */,
+				FF5236241902EE9100F5B937 /* BNRImageTransformer.h */,
+				FF5236251902EE9100F5B937 /* BNRImageTransformer.m */,
 				FF974D3118F866A200EBDD78 /* BNRItemsViewController.h */,
 				FF974D3218F866A200EBDD78 /* BNRItemsViewController.m */,
 				FFF10D1118FFF3C300BEDA04 /* HeaderView.xib */,
@@ -149,7 +155,6 @@
 				FF974D3718F86D4A00EBDD78 /* BNRItemStore.h */,
 				FF974D3818F86D4A00EBDD78 /* BNRItemStore.m */,
 				FF974D1318F8668700EBDD78 /* Images.xcassets */,
-				FF974D1018F8668700EBDD78 /* Homepwner.xcdatamodeld */,
 				FF974D0518F8668700EBDD78 /* Supporting Files */,
 			);
 			path = Homepwner;
@@ -283,12 +288,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF974D0B18F8668700EBDD78 /* main.m in Sources */,
-				FFF10D1018FFE74000BEDA04 /* BNRItem.m in Sources */,
-				FF974D1218F8668700EBDD78 /* Homepwner.xcdatamodeld in Sources */,
+				FF5236231902ED8100F5B937 /* Homepwner.xcdatamodeld in Sources */,
 				FFFD0F7019001B4300511656 /* BNRDetailViewController.m in Sources */,
 				FFFEE6AC19014EFA00876B3D /* BNRImageStore.m in Sources */,
 				FF974D3318F866A200EBDD78 /* BNRItemsViewController.m in Sources */,
 				FF974D0F18F8668700EBDD78 /* BNRAppDelegate.m in Sources */,
+				FF5236261902EE9100F5B937 /* BNRImageTransformer.m in Sources */,
+				FF5236291902F24700F5B937 /* BNRItem.m in Sources */,
 				FF974D3918F86D4A00EBDD78 /* BNRItemStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,12 +514,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FF974D1018F8668700EBDD78 /* Homepwner.xcdatamodeld */ = {
+		FF5236211902ED8100F5B937 /* Homepwner.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FF974D1118F8668700EBDD78 /* Homepwner.xcdatamodel */,
+				FF5236221902ED8100F5B937 /* Homepwner.xcdatamodel */,
 			);
-			currentVersion = FF974D1118F8668700EBDD78 /* Homepwner.xcdatamodel */;
+			currentVersion = FF5236221902ED8100F5B937 /* Homepwner.xcdatamodel */;
 			path = Homepwner.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

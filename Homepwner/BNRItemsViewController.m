@@ -35,9 +35,9 @@
 -(IBAction)addNewItem:(id)sender
 {
     
-    BNRItem *item = [[BNRItem alloc]initWithName:@"Test" andNumber:@"1234567"];
+   // BNRItem *item = [[BNRItem alloc]init];
     
-   [[BNRItemStore sharedStore]createItem:item];
+   BNRItem *item = [[BNRItemStore sharedStore]createItem];
     
    // NSInteger lastRow = [[[BNRItemStore sharedStore]allItems]indexOfObject:item];
     
@@ -50,6 +50,8 @@
     
     dvc.item = item;
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:dvc];
+    
+    navController.restorationIdentifier = NSStringFromClass([navController class]);
     
     [self presentViewController:navController animated:YES completion:nil];
 
@@ -89,18 +91,21 @@
         
         navItem.title = @"Contacts";
         
+        self.restorationIdentifier = NSStringFromClass([self class]);
+        self.restorationClass = [self class];
+        
         
         UIBarButtonItem *bbi = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewItem:)];
         
         navItem.rightBarButtonItem = bbi;
         navItem.leftBarButtonItem = self.editButtonItem;
         
-        BNRItem *item1 = [[BNRItem alloc]initWithName:@"Louise" andNumber:@"0857550453"];
-        BNRItem *item2 = [[BNRItem alloc]initWithName:@"Joe" andNumber:@"0851234567"];
+        //BNRItem *item1 = [[BNRItem alloc]initWithName:@"Louise" andNumber:@"0857550453"];
+        //BNRItem *item2 = [[BNRItem alloc]initWithName:@"Joe" andNumber:@"0851234567"];
         
-        [[BNRItemStore sharedStore]createItem:item1];
+        //[[BNRItemStore sharedStore]createItem:item1];
         
-        [[BNRItemStore sharedStore]createItem:item2];
+        //[[BNRItemStore sharedStore]createItem:item2];
         
     }
     return self;
@@ -177,5 +182,6 @@
     [self.tableView reloadData];
     
 }
+
 
 @end
