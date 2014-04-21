@@ -26,6 +26,7 @@
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
 	<string>5224A528-1F76-4E00-A5BD-ACEF00E11D2D</string>
+	<string>151A4B22-1606-4548-9C48-B1370BF696D1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -33,6 +34,7 @@
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>5224A528-1F76-4E00-A5BD-ACEF00E11D2D</string>
+			<string>151A4B22-1606-4548-9C48-B1370BF696D1</string>
 			<key>IDESourceControlWCCName</key>
 			<string>COMP41550-Glynn-Louise-13201833</string>
 		</dict>
