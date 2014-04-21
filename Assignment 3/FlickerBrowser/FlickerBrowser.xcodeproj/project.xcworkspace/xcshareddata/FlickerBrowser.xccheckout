@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>78FBA039-FF62-485D-A859-7EEA024D6CFA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FlickerBrowser</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>151A4B22-1606-4548-9C48-B1370BF696D1</key>
+		<string>https://github.com/louiseglynn/COMP41550-Glynn-Louise-13201833.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Assignment 3/FlickerBrowser/FlickerBrowser.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>151A4B22-1606-4548-9C48-B1370BF696D1</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/louiseglynn/COMP41550-Glynn-Louise-13201833.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>151A4B22-1606-4548-9C48-B1370BF696D1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>151A4B22-1606-4548-9C48-B1370BF696D1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>COMP41550-Glynn-Louise-13201833</string>
+		</dict>
+	</array>
+</dict>
+</plist>
