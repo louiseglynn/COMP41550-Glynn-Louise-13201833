@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>84F8A6A1-6604-4D81-ACF4-AE49C08C742E</string>
+	<string>AFEECBAE-F281-4CA4-B08A-5DBC53A9A556</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ChatApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5224A528-1F76-4E00-A5BD-ACEF00E11D2D</key>
+		<key>151A4B22-1606-4548-9C48-B1370BF696D1</key>
 		<string>https://github.com/louiseglynn/COMP41550-Glynn-Louise-13201833.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ChatApp/ChatApp.xcodeproj/project.xcworkspace</string>
+	<string>Examples/ChatApp/ChatApp.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5224A528-1F76-4E00-A5BD-ACEF00E11D2D</key>
-		<string>../../..</string>
+		<key>151A4B22-1606-4548-9C48-B1370BF696D1</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/louiseglynn/COMP41550-Glynn-Louise-13201833.git</string>
