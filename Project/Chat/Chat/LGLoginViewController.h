@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LGLoginViewController : UIViewController<UITextFieldDelegate>{
+@interface LGLoginViewController : UIViewController<UITextFieldDelegate, NSURLConnectionDelegate>{
 
 NSMutableData *receivedData;
 

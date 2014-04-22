@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIBubbleTableViewDataSource.h"
 
-@interface LGChatClientViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, NSXMLParserDelegate>{
+@interface LGChatClientViewControllerNew : UIViewController<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, NSXMLParserDelegate, UIBubbleTableViewDataSource>{
 
 NSMutableData *receivedData;
 NSMutableArray *messages;
@@ -37,11 +38,12 @@ Boolean inUser;
 
 }
 
-//@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (weak, nonatomic) IBOutlet UIView *textInputView;
 
 @property (weak, nonatomic) IBOutlet UITextField *messageText;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
-@property (weak, nonatomic) IBOutlet UITableView *messageList;
+@property (weak, nonatomic) IBOutlet UIBubbleTableView *bubbleTable;
 
 - (IBAction)sendClicked:(id)sender;
 

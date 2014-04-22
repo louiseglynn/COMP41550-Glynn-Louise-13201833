@@ -25,7 +25,24 @@
 		FF0B230719053AE3001A8D80 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0B230619053AE3001A8D80 /* Chat.storyboard */; };
 		FF0B230A19053BDF001A8D80 /* LGChatClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B230919053BDF001A8D80 /* LGChatClientViewController.m */; };
 		FF0B230F190562A4001A8D80 /* LGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B230E190562A4001A8D80 /* LGLoginViewController.m */; };
+		FF5EE87D190682130022910A /* bubbleMine.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EE873190682130022910A /* bubbleMine.png */; };
+		FF5EE87E190682130022910A /* bubbleMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EE874190682130022910A /* bubbleMine@2x.png */; };
+		FF5EE87F190682130022910A /* bubbleSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EE875190682130022910A /* bubbleSomeone.png */; };
+		FF5EE880190682130022910A /* bubbleSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EE876190682130022910A /* bubbleSomeone@2x.png */; };
+		FF5EE881190682130022910A /* missingAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EE877190682130022910A /* missingAvatar.png */; };
+		FF5EE882190682130022910A /* missingAvatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EE878190682130022910A /* missingAvatar@2x.png */; };
+		FF5EE883190682130022910A /* typingMine.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EE879190682130022910A /* typingMine.png */; };
+		FF5EE884190682130022910A /* typingMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EE87A190682130022910A /* typingMine@2x.png */; };
+		FF5EE885190682130022910A /* typingSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EE87B190682130022910A /* typingSomeone.png */; };
+		FF5EE886190682130022910A /* typingSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EE87C190682130022910A /* typingSomeone@2x.png */; };
+		FF5EE893190682220022910A /* NSBubbleData.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5EE889190682220022910A /* NSBubbleData.m */; };
+		FF5EE894190682220022910A /* UIBubbleHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5EE88B190682220022910A /* UIBubbleHeaderTableViewCell.m */; };
+		FF5EE895190682220022910A /* UIBubbleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5EE88D190682220022910A /* UIBubbleTableView.m */; };
+		FF5EE896190682220022910A /* UIBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5EE88F190682220022910A /* UIBubbleTableViewCell.m */; };
+		FF5EE897190682220022910A /* UIBubbleTypingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5EE892190682220022910A /* UIBubbleTypingTableViewCell.m */; };
+		FF5EE89D190686260022910A /* LGChatClientViewControllerNew.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5EE89C190686260022910A /* LGChatClientViewControllerNew.m */; };
 		FFE6970619059CF4003E879B /* iphone-sms-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFE6970519059CF4003E879B /* iphone-sms-2.jpg */; };
+		FFE806121906F5E000B584E8 /* avatar-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFE806111906F5E000B584E8 /* avatar-1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +79,31 @@
 		FF0B230919053BDF001A8D80 /* LGChatClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGChatClientViewController.m; sourceTree = "<group>"; };
 		FF0B230D190562A4001A8D80 /* LGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGLoginViewController.h; sourceTree = "<group>"; };
 		FF0B230E190562A4001A8D80 /* LGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGLoginViewController.m; sourceTree = "<group>"; };
+		FF5EE873190682130022910A /* bubbleMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleMine.png; sourceTree = "<group>"; };
+		FF5EE874190682130022910A /* bubbleMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleMine@2x.png"; sourceTree = "<group>"; };
+		FF5EE875190682130022910A /* bubbleSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleSomeone.png; sourceTree = "<group>"; };
+		FF5EE876190682130022910A /* bubbleSomeone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleSomeone@2x.png"; sourceTree = "<group>"; };
+		FF5EE877190682130022910A /* missingAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missingAvatar.png; sourceTree = "<group>"; };
+		FF5EE878190682130022910A /* missingAvatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "missingAvatar@2x.png"; sourceTree = "<group>"; };
+		FF5EE879190682130022910A /* typingMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typingMine.png; sourceTree = "<group>"; };
+		FF5EE87A190682130022910A /* typingMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typingMine@2x.png"; sourceTree = "<group>"; };
+		FF5EE87B190682130022910A /* typingSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typingSomeone.png; sourceTree = "<group>"; };
+		FF5EE87C190682130022910A /* typingSomeone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typingSomeone@2x.png"; sourceTree = "<group>"; };
+		FF5EE888190682220022910A /* NSBubbleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSBubbleData.h; path = ../src/NSBubbleData.h; sourceTree = "<group>"; };
+		FF5EE889190682220022910A /* NSBubbleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSBubbleData.m; path = ../src/NSBubbleData.m; sourceTree = "<group>"; };
+		FF5EE88A190682220022910A /* UIBubbleHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBubbleHeaderTableViewCell.h; path = ../src/UIBubbleHeaderTableViewCell.h; sourceTree = "<group>"; };
+		FF5EE88B190682220022910A /* UIBubbleHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIBubbleHeaderTableViewCell.m; path = ../src/UIBubbleHeaderTableViewCell.m; sourceTree = "<group>"; };
+		FF5EE88C190682220022910A /* UIBubbleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBubbleTableView.h; path = ../src/UIBubbleTableView.h; sourceTree = "<group>"; };
+		FF5EE88D190682220022910A /* UIBubbleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIBubbleTableView.m; path = ../src/UIBubbleTableView.m; sourceTree = "<group>"; };
+		FF5EE88E190682220022910A /* UIBubbleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBubbleTableViewCell.h; path = ../src/UIBubbleTableViewCell.h; sourceTree = "<group>"; };
+		FF5EE88F190682220022910A /* UIBubbleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIBubbleTableViewCell.m; path = ../src/UIBubbleTableViewCell.m; sourceTree = "<group>"; };
+		FF5EE890190682220022910A /* UIBubbleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBubbleTableViewDataSource.h; path = ../src/UIBubbleTableViewDataSource.h; sourceTree = "<group>"; };
+		FF5EE891190682220022910A /* UIBubbleTypingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBubbleTypingTableViewCell.h; path = ../src/UIBubbleTypingTableViewCell.h; sourceTree = "<group>"; };
+		FF5EE892190682220022910A /* UIBubbleTypingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIBubbleTypingTableViewCell.m; path = ../src/UIBubbleTypingTableViewCell.m; sourceTree = "<group>"; };
+		FF5EE89B1906861C0022910A /* LGChatClientViewControllerNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGChatClientViewControllerNew.h; sourceTree = "<group>"; };
+		FF5EE89C190686260022910A /* LGChatClientViewControllerNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGChatClientViewControllerNew.m; sourceTree = "<group>"; };
 		FFE6970519059CF4003E879B /* iphone-sms-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iphone-sms-2.jpg"; sourceTree = "<group>"; };
+		FFE806111906F5E000B584E8 /* avatar-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "avatar-1.jpg"; path = "../Chat/avatar-1.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +135,7 @@
 		FF0B22C519053AC0001A8D80 = {
 			isa = PBXGroup;
 			children = (
+				FF5EE872190682130022910A /* images */,
 				FF0B22D919053AC0001A8D80 /* Chat */,
 				FF0B22F619053AC0001A8D80 /* ChatTests */,
 				FF0B22D019053AC0001A8D80 /* Frameworks */,
@@ -125,6 +167,17 @@
 		FF0B22D919053AC0001A8D80 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				FF5EE888190682220022910A /* NSBubbleData.h */,
+				FF5EE889190682220022910A /* NSBubbleData.m */,
+				FF5EE88A190682220022910A /* UIBubbleHeaderTableViewCell.h */,
+				FF5EE88B190682220022910A /* UIBubbleHeaderTableViewCell.m */,
+				FF5EE88E190682220022910A /* UIBubbleTableViewCell.h */,
+				FF5EE88F190682220022910A /* UIBubbleTableViewCell.m */,
+				FF5EE892190682220022910A /* UIBubbleTypingTableViewCell.m */,
+				FF5EE891190682220022910A /* UIBubbleTypingTableViewCell.h */,
+				FF5EE890190682220022910A /* UIBubbleTableViewDataSource.h */,
+				FF5EE88C190682220022910A /* UIBubbleTableView.h */,
+				FF5EE88D190682220022910A /* UIBubbleTableView.m */,
 				FF0B22E219053AC0001A8D80 /* LGAppDelegate.h */,
 				FF0B22E319053AC0001A8D80 /* LGAppDelegate.m */,
 				FF0B22E819053AC0001A8D80 /* Images.xcassets */,
@@ -133,6 +186,8 @@
 				FF0B22DA19053AC0001A8D80 /* Supporting Files */,
 				FF0B230619053AE3001A8D80 /* Chat.storyboard */,
 				FF0B230D190562A4001A8D80 /* LGLoginViewController.h */,
+				FF5EE89C190686260022910A /* LGChatClientViewControllerNew.m */,
+				FF5EE89B1906861C0022910A /* LGChatClientViewControllerNew.h */,
 				FF0B230E190562A4001A8D80 /* LGLoginViewController.m */,
 				FF0B230819053BDF001A8D80 /* LGChatClientViewController.h */,
 				FF0B230919053BDF001A8D80 /* LGChatClientViewController.m */,
@@ -167,6 +222,24 @@
 				FF0B22F919053AC0001A8D80 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF5EE872190682130022910A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FF5EE873190682130022910A /* bubbleMine.png */,
+				FF5EE874190682130022910A /* bubbleMine@2x.png */,
+				FF5EE875190682130022910A /* bubbleSomeone.png */,
+				FF5EE876190682130022910A /* bubbleSomeone@2x.png */,
+				FF5EE877190682130022910A /* missingAvatar.png */,
+				FF5EE878190682130022910A /* missingAvatar@2x.png */,
+				FFE806111906F5E000B584E8 /* avatar-1.jpg */,
+				FF5EE879190682130022910A /* typingMine.png */,
+				FF5EE87A190682130022910A /* typingMine@2x.png */,
+				FF5EE87B190682130022910A /* typingSomeone.png */,
+				FF5EE87C190682130022910A /* typingSomeone@2x.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,10 +318,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF5EE886190682130022910A /* typingSomeone@2x.png in Resources */,
 				FF0B230719053AE3001A8D80 /* Chat.storyboard in Resources */,
+				FF5EE885190682130022910A /* typingSomeone.png in Resources */,
+				FF5EE87E190682130022910A /* bubbleMine@2x.png in Resources */,
+				FF5EE87D190682130022910A /* bubbleMine.png in Resources */,
+				FF5EE880190682130022910A /* bubbleSomeone@2x.png in Resources */,
 				FFE6970619059CF4003E879B /* iphone-sms-2.jpg in Resources */,
+				FF5EE883190682130022910A /* typingMine.png in Resources */,
+				FF5EE884190682130022910A /* typingMine@2x.png in Resources */,
 				FF0B22DE19053AC0001A8D80 /* InfoPlist.strings in Resources */,
+				FF5EE881190682130022910A /* missingAvatar.png in Resources */,
 				FF0B22E919053AC0001A8D80 /* Images.xcassets in Resources */,
+				FF5EE882190682130022910A /* missingAvatar@2x.png in Resources */,
+				FFE806121906F5E000B584E8 /* avatar-1.jpg in Resources */,
+				FF5EE87F190682130022910A /* bubbleSomeone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +353,15 @@
 			files = (
 				FF0B230A19053BDF001A8D80 /* LGChatClientViewController.m in Sources */,
 				FF0B230F190562A4001A8D80 /* LGLoginViewController.m in Sources */,
+				FF5EE897190682220022910A /* UIBubbleTypingTableViewCell.m in Sources */,
+				FF5EE893190682220022910A /* NSBubbleData.m in Sources */,
+				FF5EE895190682220022910A /* UIBubbleTableView.m in Sources */,
+				FF5EE896190682220022910A /* UIBubbleTableViewCell.m in Sources */,
+				FF5EE89D190686260022910A /* LGChatClientViewControllerNew.m in Sources */,
 				FF0B22E719053AC0001A8D80 /* Chat.xcdatamodeld in Sources */,
 				FF0B22E019053AC0001A8D80 /* main.m in Sources */,
 				FF0B22E419053AC0001A8D80 /* LGAppDelegate.m in Sources */,
+				FF5EE894190682220022910A /* UIBubbleHeaderTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

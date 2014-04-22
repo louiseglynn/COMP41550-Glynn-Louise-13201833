@@ -16,15 +16,6 @@
 
 @implementation LGLoginViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -43,7 +34,7 @@
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
+
     [textField resignFirstResponder];
     return YES;
 }
@@ -77,39 +68,39 @@
         NSError *error = [[NSError alloc]init];
         [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
         
-        NSURLConnection *theConnection =[[NSURLConnection alloc] initWithRequest:request delegate:self];
+        [NSURLConnection connectionWithRequest:request delegate:self];
         
-        if (theConnection) {
-            
-            NSLog(@"connection ok");
-            // Create the NSMutableData that will hold
-            // the received data
-            // receivedData is declared as a method instance elsewhere
-            receivedData = [NSMutableData data];
-            
-            
-        } else {
-            
-            NSLog(@"download can not be made");
-            
-            // inform the user that the download could not be made
-        }
-
+        
+        
+        
     }
+    
+}
+
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
+    
+    [self performSegueWithIdentifier:@"loginConError" sender:self];
     
 }
     
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
 
-        [receivedData setLength:0];
-        
+    receivedData = [NSMutableData data];
+    
 }
     
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
     
 
-        [receivedData appendData:data];
+    [receivedData appendData:data];
         
+}
+
+-(NSCachedURLResponse *)connection:(NSURLConnection *)connection
+                 willCacheResponse:(NSCachedURLResponse *)cachedResponse{
+    
+    return nil;
+    
 }
     
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection{
@@ -118,7 +109,6 @@
      NSLog(@"%@", myString);
     
     if([myString isEqualToString:@"YES"]){
-        
         
         [self performSegueWithIdentifier:@"login" sender:self];
         
@@ -133,9 +123,13 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    [segue.destinationViewController setUsername:self.usernameField.text];
+    if([segue.identifier isEqualToString:@"login"]){
+        [segue.destinationViewController setUsername:self.usernameField.text];
+    }
     
 }
+
+
 
 
 @end

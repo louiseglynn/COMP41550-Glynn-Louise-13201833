@@ -14,54 +14,13 @@
 
 @implementation LGChatClientViewController
 
-int bubbleFragment_width, bubbleFragment_height;
-int bubble_x, bubble_y;
-static CGFloat const FONTSIZE = 14.0;
-static int const DATELABEL_TAG = 1;
-static int const MESSAGELABEL_TAG = 2;
-static int const IMAGEVIEW_TAG_1 = 3;
-
 #pragma mark - default methods
-
-/*- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-     NSLog(@"hello louise");
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        
-        lastId = 0;
-        chatParser = NULL;
-        
-       
-    }
-    return self;
-}*/
-
-//---calculate the height for the message---
--(CGFloat) labelHeight:(NSString *) text {
-    CGSize maximumLabelSize = CGSizeMake((bubbleFragment_width * 3) - 25,9999);
-    CGSize expectedLabelSize = [text sizeWithFont:[UIFont systemFontOfSize: FONTSIZE]
-                                constrainedToSize:maximumLabelSize
-                                    lineBreakMode:UILineBreakModeWordWrap];
-    return expectedLabelSize.height;
-}
-
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    //---add this---
-    //---location to display the bubble fragment---
-    bubble_x = 10;
-    bubble_y = 20;
-    
-    //---size of the bubble fragment---
-    bubbleFragment_width = 56;
-    bubbleFragment_height = 32;
-	
+
     
     _messageList.dataSource = self;
     _messageList.delegate = self;
@@ -69,7 +28,9 @@ static int const IMAGEVIEW_TAG_1 = 3;
     
     [self getNewMessages];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ChatListItem"];
+    NSLog(@"%@", messages);
+    
+    [self.messageList registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ChatListItem"];
 
     
 }
@@ -232,6 +193,7 @@ static int const IMAGEVIEW_TAG_1 = 3;
     [chatParser setDelegate:self];
     [chatParser parse];
 
+    NSLog(@"%@", messages);
     
     [_messageList reloadData];
     
@@ -260,15 +222,6 @@ static int const IMAGEVIEW_TAG_1 = 3;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    /*
-    
-    
-    int labelHeight = [self labelHeight:[messages objectAtIndex:indexPath.row]];
-    labelHeight -= bubbleFragment_height;
-    if (labelHeight<0) labelHeight = 0;
-    
-    return (bubble_y + bubbleFragment_height * 2 + labelHeight) + 5;
-     */
     
     return 75;
 
@@ -276,74 +229,19 @@ static int const IMAGEVIEW_TAG_1 = 3;
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+   //NSLog(@"%@", messages);
     
     
     UITableViewCell *cell = (UITableViewCell *)[self.messageList dequeueReusableCellWithIdentifier:@"ChatListItem"];
+
     
     
-    /*
-    UILabel* dateLabel = nil;
-    UILabel* messageLabel = nil;
-    UIImageView *imageView = nil;
-    
-    //--------------
-    
-    //---add this---
-    //---date---
-    dateLabel = [[UILabel alloc] init];
-    dateLabel.tag = DATELABEL_TAG;
-    [cell.contentView addSubview: dateLabel];
-    
-    //---message--
-    messageLabel = [[UILabel alloc] init];
-    messageLabel.tag = MESSAGELABEL_TAG;
-    [cell.contentView addSubview: messageLabel];
-    
-    //---set the images to display for each UIImageView---
-    imageView.image =
-    [UIImage imageNamed:@"iphone-sms-2.jpg"];
-    
-    //---calculate the height for the label---
-    int labelHeight = [self labelHeight:[messages objectAtIndex:indexPath.row]];
-    labelHeight -= bubbleFragment_height;
-    if (labelHeight<0) labelHeight = 0;
-    
-    //---you can customize the look and feel for the date for each message here---
-    dateLabel.frame = CGRectMake(0.0, 0.0, 200, 15.0);
-    dateLabel.font = [UIFont boldSystemFontOfSize: FONTSIZE];
-    dateLabel.textAlignment = UITextAlignmentLeft;
-    dateLabel.textColor = [UIColor darkGrayColor];
-    dateLabel.backgroundColor = [UIColor clearColor];
-    
-    //---top left---
-    imageView.frame =
-    CGRectMake(bubble_x, bubble_y, bubbleFragment_width, bubbleFragment_height);
-    
-    
-    //---you can customize the look and feel for each message here---
-    messageLabel.frame =
-    CGRectMake(bubble_x + 10, bubble_y + 5,
-               (bubbleFragment_width * 3) - 25,
-               (bubbleFragment_height * 2) + labelHeight - 10);
-    
-    messageLabel.font = [UIFont systemFontOfSize:FONTSIZE];
-    messageLabel.textAlignment = UITextAlignmentCenter;
-    messageLabel.textColor = [UIColor darkTextColor];
-    messageLabel.numberOfLines = 0; //---display multiple lines---
-    messageLabel.backgroundColor = [UIColor clearColor];
-    messageLabel.lineBreakMode = UILineBreakModeWordWrap;
-    
-    //dateLabel.text = [dateOfMessages objectAtIndex:indexPath.row];
-    */
     
     NSDictionary *itemAtIndex = (NSDictionary *)[messages objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [itemAtIndex objectForKey:@"text"];
-    
     cell.detailTextLabel.text = [itemAtIndex objectForKey:@"user"];
     
-    //messageLabel.text = [messages objectAtIndex:indexPath.row];
     
     return cell;
     
