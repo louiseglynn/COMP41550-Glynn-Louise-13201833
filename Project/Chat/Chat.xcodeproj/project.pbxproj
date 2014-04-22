@@ -23,7 +23,6 @@
 		FF0B22FB19053AC0001A8D80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF0B22F919053AC0001A8D80 /* InfoPlist.strings */; };
 		FF0B22FD19053AC0001A8D80 /* ChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B22FC19053AC0001A8D80 /* ChatTests.m */; };
 		FF0B230719053AE3001A8D80 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0B230619053AE3001A8D80 /* Chat.storyboard */; };
-		FF0B230A19053BDF001A8D80 /* LGChatClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B230919053BDF001A8D80 /* LGChatClientViewController.m */; };
 		FF0B230F190562A4001A8D80 /* LGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B230E190562A4001A8D80 /* LGLoginViewController.m */; };
 		FF5EE87D190682130022910A /* bubbleMine.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EE873190682130022910A /* bubbleMine.png */; };
 		FF5EE87E190682130022910A /* bubbleMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EE874190682130022910A /* bubbleMine@2x.png */; };
@@ -75,8 +74,6 @@
 		FF0B22FA19053AC0001A8D80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FF0B22FC19053AC0001A8D80 /* ChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTests.m; sourceTree = "<group>"; };
 		FF0B230619053AE3001A8D80 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
-		FF0B230819053BDF001A8D80 /* LGChatClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGChatClientViewController.h; sourceTree = "<group>"; };
-		FF0B230919053BDF001A8D80 /* LGChatClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGChatClientViewController.m; sourceTree = "<group>"; };
 		FF0B230D190562A4001A8D80 /* LGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGLoginViewController.h; sourceTree = "<group>"; };
 		FF0B230E190562A4001A8D80 /* LGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGLoginViewController.m; sourceTree = "<group>"; };
 		FF5EE873190682130022910A /* bubbleMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleMine.png; sourceTree = "<group>"; };
@@ -189,8 +186,6 @@
 				FF5EE89C190686260022910A /* LGChatClientViewControllerNew.m */,
 				FF5EE89B1906861C0022910A /* LGChatClientViewControllerNew.h */,
 				FF0B230E190562A4001A8D80 /* LGLoginViewController.m */,
-				FF0B230819053BDF001A8D80 /* LGChatClientViewController.h */,
-				FF0B230919053BDF001A8D80 /* LGChatClientViewController.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -351,7 +346,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF0B230A19053BDF001A8D80 /* LGChatClientViewController.m in Sources */,
 				FF0B230F190562A4001A8D80 /* LGLoginViewController.m in Sources */,
 				FF5EE897190682220022910A /* UIBubbleTypingTableViewCell.m in Sources */,
 				FF5EE893190682220022910A /* NSBubbleData.m in Sources */,

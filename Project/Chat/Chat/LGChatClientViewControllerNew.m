@@ -155,10 +155,7 @@ NSMutableArray *bubbleData;
         
         [request setHTTPBody:body];
         
-        NSHTTPURLResponse *response = nil;
-        
-        NSError *error = [[NSError alloc]init];
-        [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        [NSURLConnection connectionWithRequest:request delegate:self];
         
         [self getNewMessages];
     }

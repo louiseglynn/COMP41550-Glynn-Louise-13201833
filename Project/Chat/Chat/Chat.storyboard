@@ -4,64 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Chat Client View Controller-->
-        <scene sceneID="OYS-57-ydV">
-            <objects>
-                <viewController id="chT-8x-7gv" customClass="LGChatClientViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dST-BH-kgJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Iqz-uk-cbx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fDs-Nk-i2m">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-70-hKk">
-                                <rect key="frame" x="20" y="134" width="280" height="414"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.85882352941176465" green="0.88627450980392153" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="ChatListItem" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChatListItem" id="GwF-NO-rfa">
-                                        <rect key="frame" x="0.0" y="22" width="280" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GwF-NO-rfa" id="OB8-ja-hIt">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22e-ti-FiO">
-                                <rect key="frame" x="264" y="95" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Send">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="sendClicked:" destination="chT-8x-7gv" eventType="touchUpInside" id="pJN-Cq-YKO"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lrd-wG-cq9">
-                                <rect key="frame" x="20" y="96" width="236" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" red="0.85882352941176465" green="0.88627450980392153" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="GBo-iT-Tmt"/>
-                    <connections>
-                        <outlet property="messageList" destination="Kg5-70-hKk" id="QMn-S4-Ekr"/>
-                        <outlet property="messageText" destination="Lrd-wG-cq9" id="4dT-0t-Ccl"/>
-                        <outlet property="sendButton" destination="22e-ti-FiO" id="cbV-RP-jNO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1fl-r1-0l6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1113" y="-656"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="gGM-KS-pgs">
             <objects>
@@ -291,7 +233,7 @@
                         <outlet property="messageText" destination="cup-Zk-UjJ" id="3h5-AL-g0u"/>
                         <outlet property="sendButton" destination="LNL-M7-BJT" id="rgO-Kf-0r9"/>
                         <outlet property="textInputView" destination="KfK-19-PJT" id="KKN-2g-DLP"/>
-                        <segue destination="f1e-f6-WuJ" kind="modal" id="MZr-D3-gL4"/>
+                        <segue destination="f1e-f6-WuJ" kind="modal" identifier="chatConError" id="MZr-D3-gL4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yq-oX-yUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -325,6 +267,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="CPH-ot-W1t"/>
+        <segue reference="MZr-D3-gL4"/>
     </inferredMetricsTieBreakers>
 </document>

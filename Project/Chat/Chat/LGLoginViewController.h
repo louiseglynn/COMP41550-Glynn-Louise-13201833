@@ -10,7 +10,7 @@
 
 @interface LGLoginViewController : UIViewController<UITextFieldDelegate, NSURLConnectionDelegate>{
 
-NSMutableData *receivedData;
+    NSMutableData *receivedData;
 
     
 }
