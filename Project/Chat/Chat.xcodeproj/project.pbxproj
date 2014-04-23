@@ -42,6 +42,7 @@
 		FF5EE89D190686260022910A /* LGChatClientViewControllerNew.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5EE89C190686260022910A /* LGChatClientViewControllerNew.m */; };
 		FFE6970619059CF4003E879B /* iphone-sms-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFE6970519059CF4003E879B /* iphone-sms-2.jpg */; };
 		FFE806121906F5E000B584E8 /* avatar-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFE806111906F5E000B584E8 /* avatar-1.jpg */; };
+		FFF7AFA01908019600CE75AF /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF7AF9F1908019600CE75AF /* Message.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		FF5EE89C190686260022910A /* LGChatClientViewControllerNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGChatClientViewControllerNew.m; sourceTree = "<group>"; };
 		FFE6970519059CF4003E879B /* iphone-sms-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iphone-sms-2.jpg"; sourceTree = "<group>"; };
 		FFE806111906F5E000B584E8 /* avatar-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "avatar-1.jpg"; path = "../Chat/avatar-1.jpg"; sourceTree = "<group>"; };
+		FFF7AF9E1908019600CE75AF /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		FFF7AF9F1908019600CE75AF /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +187,8 @@
 				FF0B230619053AE3001A8D80 /* Chat.storyboard */,
 				FF0B230D190562A4001A8D80 /* LGLoginViewController.h */,
 				FF5EE89C190686260022910A /* LGChatClientViewControllerNew.m */,
+				FFF7AF9E1908019600CE75AF /* Message.h */,
+				FFF7AF9F1908019600CE75AF /* Message.m */,
 				FF5EE89B1906861C0022910A /* LGChatClientViewControllerNew.h */,
 				FF0B230E190562A4001A8D80 /* LGLoginViewController.m */,
 			);
@@ -355,6 +360,7 @@
 				FF0B22E719053AC0001A8D80 /* Chat.xcdatamodeld in Sources */,
 				FF0B22E019053AC0001A8D80 /* main.m in Sources */,
 				FF0B22E419053AC0001A8D80 /* LGAppDelegate.m in Sources */,
+				FFF7AFA01908019600CE75AF /* Message.m in Sources */,
 				FF5EE894190682220022910A /* UIBubbleHeaderTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

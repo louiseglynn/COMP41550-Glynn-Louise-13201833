@@ -44,14 +44,10 @@
 }
 
 - (IBAction)loginClicked:(id)sender {
-
-    
-    NSLog(@"login clicked");
     
     
     if([_passwordField.text length] >0 && [_usernameField.text length]){
-        
-        NSLog(@"ok");
+
         
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
         
@@ -74,24 +70,21 @@
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
-    
-    NSLog(@"did fail with error");
+
     
     [self performSegueWithIdentifier:@"loginConError" sender:self];
     
 }
     
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
-    
-    NSLog(@"did receive response");
+
 
     receivedData = [NSMutableData data];
     
 }
     
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
-    
-    NSLog(@"did receive data");
+
     [receivedData appendData:data];
         
 }
@@ -105,10 +98,10 @@
     
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection{
     
-    NSLog(@"connection finished loading");
+
     
     NSString *myString = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
-     NSLog(@"%@", myString);
+
     
     if([myString isEqualToString:@"YES"]){
         
@@ -124,8 +117,7 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    NSLog(@"prepare for segue");
+
     
     if([segue.identifier isEqualToString:@"login"]){
         [segue.destinationViewController setUsername:self.usernameField.text];

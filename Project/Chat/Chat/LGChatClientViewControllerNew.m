@@ -10,10 +10,14 @@
 #import "UIBubbleTableView.h"
 #import "UIBubbleTableViewDataSource.h"
 #import "NSBubbleData.h"
+@import CoreData;
+#import "Message.h"
+
 
 @interface LGChatClientViewControllerNew ()
 
-
+@property (nonatomic, strong) NSManagedObjectContext *context;
+@property (nonatomic, strong) NSManagedObjectModel *model;
 
 @end
 
@@ -21,12 +25,46 @@
 
 NSMutableArray *bubbleData;
 
+-(NSString *)itemArchivePath{
+    
+    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *documentDirectory = [documentDirectories firstObject];
+    
+    return [documentDirectory stringByAppendingPathComponent:@"message.data"];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    _model = [NSManagedObjectModel mergedModelFromBundles:nil];
     
-    [self getNewMessages];
+    NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc]initWithManagedObjectModel:_model];
+    
+    NSString *path = self.itemArchivePath;
+    
+    NSURL *storeURL = [NSURL fileURLWithPath:path];
+    
+    NSError *error = nil;
+    
+    if(![psc addPersistentStoreWithType:NSSQLiteStoreType
+                          configuration:nil
+                                    URL:storeURL
+                                 options:nil
+                                   error:&error]){
+        @throw [NSException exceptionWithName:@"OpenFailure"
+                                       reason:[error localizedDescription]
+                                     userInfo:nil];
+    }
+    
+    _context = [[NSManagedObjectContext alloc]init];
+    _context.persistentStoreCoordinator = psc;
+    
+    [self loadAllItems];
+    
+    //[self getNewMessages];
     
     _messageText.delegate = self;
     
@@ -60,6 +98,45 @@ NSMutableArray *bubbleData;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+-(BOOL)saveChanged{
+    
+    NSError *error;
+    BOOL successful = [self.context save:&error];
+    
+    if(!successful){
+        NSLog(@"Error saving: %@", [error localizedDescription]);
+    }
+    return successful;
+    
+}
+
+-(void)loadAllItems{
+    
+    if(!messages){
+        
+        NSLog(@"load messages");
+        
+        NSFetchRequest *request = [[NSFetchRequest alloc]init];
+        
+        NSEntityDescription *e = [NSEntityDescription entityForName:@"Message" inManagedObjectContext:self.context];
+        
+        request.entity = e;
+        
+        NSError *error;
+        
+        NSArray *result = [self.context executeFetchRequest:request error:&error];
+        
+        if(!result){
+            [NSException raise:@"Fetch failed"
+                        format:@"Reason %@", [error localizedDescription]];
+            
+        }
+        messages = [[NSMutableArray alloc]initWithArray:result];
+        
+        
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -140,6 +217,9 @@ NSMutableArray *bubbleData;
     
     if([_messageText.text length] >0){
         
+        Message *message = [NSEntityDescription insertNewObjectForEntityForName:@"Message" inManagedObjectContext:self.context];
+        
+        [messages addObject:message]; 
         
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
         
