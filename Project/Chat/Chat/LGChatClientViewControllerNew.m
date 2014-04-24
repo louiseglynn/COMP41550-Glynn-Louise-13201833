@@ -17,6 +17,8 @@
 
 @interface LGChatClientViewControllerNew ()
 
+
+
 @property (nonatomic, strong) NSManagedObjectContext *context;
 @property (nonatomic, strong) NSManagedObjectModel *model;
 
@@ -30,10 +32,11 @@ NSMutableArray *bubbleData;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 
+    [self showMessages];
     
-    [self getNewMessages];
+    //[self getNewMessages];
+    
     
     _messageText.delegate = self;
     
@@ -70,7 +73,253 @@ NSMutableArray *bubbleData;
 }
 
 
+- (IBAction)sendClicked:(id)sender
+{
+    self.bubbleTable.typingBubble = NSBubbleTypingTypeNobody;
+    
+    NSBubbleData *sayBubble = [NSBubbleData dataWithText:self.messageText.text date:[NSDate dateWithTimeIntervalSinceNow:0] type:BubbleTypeMine];
+    [bubbleData addObject:sayBubble];
 
+    
+    if([_messageText.text length] >0){
+
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
+        
+        NSURL *url = [[NSURL alloc]initWithString:@"http://louiseglynn.com/chat/addMessage.php"];
+        
+        [request setURL:url];
+        [request setHTTPMethod:@"POST"];
+        
+        NSMutableData *body = [NSMutableData data];
+        
+        [body appendData:[[NSString stringWithFormat:@"user=%@&message=%@",username,
+                           _messageText.text] dataUsingEncoding:NSUTF8StringEncoding] ];
+        
+        [request setHTTPBody:body];
+        
+        [NSURLConnection connectionWithRequest:request delegate:self];
+        
+        [self getNewMessages];
+    }
+    
+    //[self.bubbleTable reloadData];
+    self.messageText.text = @"";
+    [self.messageText resignFirstResponder];
+
+}
+
+
+
+-(void)setUsername:(NSString *)uname{
+    
+    username = uname;
+    
+}
+
+-(void)showMessages{
+    
+    //NSLog(@"show messages");
+    
+    bubbleData = [[NSMutableArray alloc]init];
+
+    //NSLog(@"%@",  [[LGMessageStore sharedStore]allMessages]);
+    
+    
+    
+    for(Message *message in [[LGMessageStore sharedStore]allMessages]){
+        
+        //NSLog(@"%@", message);
+        
+        //NSLog(@"display message");
+        
+        NSBubbleData *bubble;
+        
+        if([message.user_name isEqualToString:@"counsellor"]){
+            
+            bubble = [NSBubbleData dataWithText:message.message date:message.message_date type:BubbleTypeSomeoneElse];
+            bubble.avatar = [UIImage imageNamed:@"avatar-1.jpg"];
+        }
+        else
+        {
+            
+            bubble = [NSBubbleData dataWithText:message.message date:message.message_date type:BubbleTypeMine];
+            bubble.avatar = nil;
+        }
+        
+       
+        lastId = [message.message_id intValue];
+        
+        [bubbleData addObject:bubble];
+        
+        
+    }
+    NSLog(@"%@", bubbleData);
+    
+    [self.bubbleTable reloadData];
+    
+    
+    
+}
+
+-(void)getNewMessages{
+    
+    NSLog(@"id=%d", lastId);
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
+    NSString *str = [[NSString alloc]init];
+    
+    
+    if(lastId!=0){
+        str = [NSString stringWithFormat:@"http://louiseglynn.com/chat/meessages.php?id=%d", lastId];
+    }
+    else{
+        str = [NSString stringWithFormat:@"http://louiseglynn.com/chat/messages.php"];
+    }
+    
+    NSURL *url = [[NSURL alloc]initWithString:str];
+    
+    [request setURL:url];
+    [request setHTTPMethod:@"GET"];
+    
+    [NSURLConnection connectionWithRequest:request delegate:self];
+    
+}
+
+
+#pragma mark - NSXML Parser specific
+
+- (void)parser:(NSXMLParser *)parser
+didStartElement:(NSString *)elementName
+  namespaceURI:(NSString *)namespaceURI
+ qualifiedName:(NSString *)qName
+    attributes:(NSDictionary *)attributeDict {
+    
+    //NSLog(@"did start parsing");
+    
+    if ( [elementName isEqualToString:@"message"] ) {
+
+        //NSLog(@"message");
+        msgAdded = [attributeDict objectForKey:@"added"];
+        msgId = [[attributeDict objectForKey:@"id"] intValue];
+        msgUser = [[NSMutableString alloc] init];
+        msgText = [[NSMutableString alloc] init];
+        inUser = NO;
+        inText = NO;
+    }
+    if ( [elementName isEqualToString:@"user"] ) {
+        inUser = YES;
+    }
+    if ( [elementName isEqualToString:@"text"] ) {
+        inText = YES;
+    }
+}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
+    if ( inUser ) {
+        [msgUser appendString:string];
+    }
+    if ( inText ) {
+        [msgText appendString:string];
+    }
+}
+
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName
+  namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
+    if ( [elementName isEqualToString:@"message"] ) {
+        
+        //NSLog(@"parsing");
+        
+        Message *message= [[LGMessageStore sharedStore]createMessage];
+        
+        message.message = msgText;
+        
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+        [dateFormat setDateFormat:@"yyyy-M-d HH:mm:ss"];
+        
+        NSDate *date =  [dateFormat dateFromString:msgAdded];
+
+        message.message_date =  date;
+
+        
+        NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+        [f setNumberStyle:NSNumberFormatterDecimalStyle];
+     
+        NSNumber *num = [NSNumber numberWithInt:msgId];
+
+        message.message_id = num;
+        message.user_name = msgUser;
+        
+        //NSLog(@"%@", message);
+        
+        lastId = msgId;
+
+    }
+    if ( [elementName isEqualToString:@"user"] ) {
+        inUser = NO;
+    }
+    if ( [elementName isEqualToString:@"text"] ) {
+        inText = NO;
+    }
+}
+
+
+#pragma mark - URL connection defaults
+
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
+    
+    [self performSegueWithIdentifier:@"loginConError" sender:self];
+    
+}
+
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
+    
+    receivedData = [NSMutableData data];
+    
+}
+
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
+    
+    
+    [receivedData appendData:data];
+    
+}
+
+-(NSCachedURLResponse *)connection:(NSURLConnection *)connection
+                 willCacheResponse:(NSCachedURLResponse *)cachedResponse{
+    
+    return nil;
+    
+}
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection{
+    
+    //NSLog(@"did finish loading");
+    
+    chatParser = [[NSXMLParser alloc]initWithData:receivedData];
+    
+    
+    [chatParser setDelegate:self];
+    [chatParser parse];
+    
+    //NSLog(@"did finish parsing");
+
+    [self showMessages];
+
+    
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:@selector(timerCallback)]];
+    
+    [invocation setTarget:self];
+    
+    [invocation setSelector:@selector(timerCallback)];
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:5.0 invocation:invocation repeats:NO];
+    
+}
+
+-(void)timerCallback{
+    
+    [self getNewMessages];
+};
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -82,11 +331,13 @@ NSMutableArray *bubbleData;
 
 - (NSInteger)rowsForBubbleTable:(UIBubbleTableView *)tableView
 {
+    NSLog(@"being called");
     return [bubbleData count];
 }
 
 - (NSBubbleData *)bubbleTableView:(UIBubbleTableView *)tableView dataForRow:(NSInteger)row
 {
+    NSLog(@"%@", [bubbleData objectAtIndex:row]);
     return [bubbleData objectAtIndex:row];
 }
 
@@ -132,226 +383,11 @@ NSMutableArray *bubbleData;
 }
 
 
-
-
 #pragma mark - Actions
 
 - (IBAction)backgroundTapped:(id)sender {
     [self.view endEditing:YES];
 }
-
-
-- (IBAction)sendClicked:(id)sender
-{
-    self.bubbleTable.typingBubble = NSBubbleTypingTypeNobody;
-    
-    NSBubbleData *sayBubble = [NSBubbleData dataWithText:self.messageText.text date:[NSDate dateWithTimeIntervalSinceNow:0] type:BubbleTypeMine];
-    [bubbleData addObject:sayBubble];
-
-    
-    if([_messageText.text length] >0){
-        
-        
-        
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
-        
-        NSURL *url = [[NSURL alloc]initWithString:@"http://louiseglynn.com/chat/addMessage.php"];
-        
-        [request setURL:url];
-        [request setHTTPMethod:@"POST"];
-        
-        NSMutableData *body = [NSMutableData data];
-        
-        [body appendData:[[NSString stringWithFormat:@"user=%@&message=%@",username,
-                           _messageText.text] dataUsingEncoding:NSUTF8StringEncoding] ];
-        
-        [request setHTTPBody:body];
-        
-        [NSURLConnection connectionWithRequest:request delegate:self];
-        
-        [self getNewMessages];
-    }
-    
-    //[self.bubbleTable reloadData];
-    self.messageText.text = @"";
-    [self.messageText resignFirstResponder];
-
-}
-
-
-
--(void)setUsername:(NSString *)uname{
-    
-    username = uname;
-    
-}
-
--(void)getNewMessages{
-    
-    NSLog(@"get new messages");
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
-    
-    NSURL *url = [[NSURL alloc]initWithString:@"http://louiseglynn.com/chat/messages.php"];
-    
-    [request setURL:url];
-    [request setHTTPMethod:@"GET"];
-    
-    [NSURLConnection connectionWithRequest:request delegate:self];
-    
-}
-
--(void)timerCallback{
-    
-    [self getNewMessages];
-};
-
-#pragma mark - NSXML Parser specific
-
-- (void)parser:(NSXMLParser *)parser
-didStartElement:(NSString *)elementName
-  namespaceURI:(NSString *)namespaceURI
- qualifiedName:(NSString *)qName
-    attributes:(NSDictionary *)attributeDict {
-    if ( [elementName isEqualToString:@"message"] ) {
-
-        msgAdded = [attributeDict objectForKey:@"added"];
-        msgId = [[attributeDict objectForKey:@"id"] intValue];
-        msgUser = [[NSMutableString alloc] init];
-        msgText = [[NSMutableString alloc] init];
-        inUser = NO;
-        inText = NO;
-    }
-    if ( [elementName isEqualToString:@"user"] ) {
-        inUser = YES;
-    }
-    if ( [elementName isEqualToString:@"text"] ) {
-        inText = YES;
-    }
-}
-
-- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    if ( inUser ) {
-        [msgUser appendString:string];
-    }
-    if ( inText ) {
-        [msgText appendString:string];
-    }
-}
-
-- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName
-  namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    if ( [elementName isEqualToString:@"message"] ) {
-        
-        Message *message= [[LGMessageStore sharedStore]createMessage];
-        
-        message.message = msgText;
-        
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-        [dateFormat setDateFormat:@"yyyy-M-d HH:mm:ss"];
-        
-        NSDate *date =  [dateFormat dateFromString:msgAdded];
-
-        message.message_date =  date;
-
-        
-        NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
-        [f setNumberStyle:NSNumberFormatterDecimalStyle];
-     
-        NSNumber *num = [NSNumber numberWithInt:msgId];
-
-        message.message_id = num;
-        message.user_name = msgUser;
-        
-        lastId = msgId;
-
-    }
-    if ( [elementName isEqualToString:@"user"] ) {
-        inUser = NO;
-    }
-    if ( [elementName isEqualToString:@"text"] ) {
-        inText = NO;
-    }
-}
-
-
-#pragma mark - URL connection defaults
-
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
-    
-    [self performSegueWithIdentifier:@"loginConError" sender:self];
-    
-}
-
--(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
-    
-    receivedData = [NSMutableData data];
-    
-}
-
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
-    
-    
-    [receivedData appendData:data];
-    
-}
-
--(NSCachedURLResponse *)connection:(NSURLConnection *)connection
-                 willCacheResponse:(NSCachedURLResponse *)cachedResponse{
-    
-    return nil;
-    
-}
-
--(void)connectionDidFinishLoading:(NSURLConnection *)connection{
-
-    
-    chatParser = [[NSXMLParser alloc]initWithData:receivedData];
-    
-    
-    [chatParser setDelegate:self];
-    [chatParser parse];
-
-    
-    bubbleData = [[NSMutableArray alloc]init];
-    
-    
-
-    for(Message *message in [[LGMessageStore sharedStore]allMessages]){
-
-        NSBubbleData *bubble;
-        
-        if([message.user_name isEqualToString:@"counsellor"]){
-            
-            bubble = [NSBubbleData dataWithText:message.message date:message.message_date type:BubbleTypeSomeoneElse];
-            bubble.avatar = [UIImage imageNamed:@"avatar-1.jpg"];
-        }
-        else
-        {
-
-            bubble = [NSBubbleData dataWithText:message.message date:message.message_date type:BubbleTypeMine];
-            bubble.avatar = nil;
-        }
-
-        
-        [bubbleData addObject:bubble];
-        
-    }
-    
-    [_bubbleTable reloadData];
-    
-    
-    
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:@selector(timerCallback)]];
-    
-    [invocation setTarget:self];
-    
-    [invocation setSelector:@selector(timerCallback)];
-    
-    timer = [NSTimer scheduledTimerWithTimeInterval:5.0 invocation:invocation repeats:NO];
-    
-}
-
 
 
 

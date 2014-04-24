@@ -13,7 +13,7 @@
 @interface LGChatClientViewControllerNew : UIViewController<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, NSXMLParserDelegate, UIBubbleTableViewDataSource>{
 
 NSMutableData *receivedData;
-//NSMutableArray *messages;
+
 NSString *username;
 
 int lastId;

@@ -135,6 +135,8 @@
 
 -(void)loadAllMessages{
     
+   // NSLog(@"load messages");
+    
     if(!self.privateMessages){
         
         NSFetchRequest *request = [[NSFetchRequest alloc]init];
@@ -153,7 +155,12 @@
              
             
         }
+        
+        
+        
         self.privateMessages = [[NSMutableArray alloc]initWithArray:result];
+        
+        //NSLog(@"%@", self.privateMessages);
     }
     
     
