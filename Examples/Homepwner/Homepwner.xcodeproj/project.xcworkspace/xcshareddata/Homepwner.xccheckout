@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D33103B5-32F6-458C-BFCE-82F2785F54EB</string>
+	<string>14A02507-E71A-4BB4-9F11-05D4D459B2F6</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Homepwner</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/louiseglynn/COMP41550-Glynn-Louise-13201833.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Homepwner/Homepwner.xcodeproj/project.xcworkspace</string>
+	<string>Examples/Homepwner/Homepwner.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5224A528-1F76-4E00-A5BD-ACEF00E11D2D</key>
-		<string>../../..</string>
+		<key>151A4B22-1606-4548-9C48-B1370BF696D1</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/louiseglynn/COMP41550-Glynn-Louise-13201833.git</string>
