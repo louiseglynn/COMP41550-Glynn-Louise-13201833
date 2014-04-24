@@ -43,6 +43,7 @@
 		FFE6970619059CF4003E879B /* iphone-sms-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFE6970519059CF4003E879B /* iphone-sms-2.jpg */; };
 		FFE806121906F5E000B584E8 /* avatar-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFE806111906F5E000B584E8 /* avatar-1.jpg */; };
 		FFF7AFA01908019600CE75AF /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF7AF9F1908019600CE75AF /* Message.m */; };
+		FFF7AFA919081EFB00CE75AF /* LGMessageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF7AFA819081EFB00CE75AF /* LGMessageStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,8 @@
 		FFE806111906F5E000B584E8 /* avatar-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "avatar-1.jpg"; path = "../Chat/avatar-1.jpg"; sourceTree = "<group>"; };
 		FFF7AF9E1908019600CE75AF /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		FFF7AF9F1908019600CE75AF /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		FFF7AFA719081EFB00CE75AF /* LGMessageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGMessageStore.h; sourceTree = "<group>"; };
+		FFF7AFA819081EFB00CE75AF /* LGMessageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGMessageStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 		FF0B22D919053AC0001A8D80 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				FFF7AFA719081EFB00CE75AF /* LGMessageStore.h */,
+				FFF7AFA819081EFB00CE75AF /* LGMessageStore.m */,
 				FF5EE888190682220022910A /* NSBubbleData.h */,
 				FF5EE889190682220022910A /* NSBubbleData.m */,
 				FF5EE88A190682220022910A /* UIBubbleHeaderTableViewCell.h */,
@@ -359,6 +364,7 @@
 				FF5EE89D190686260022910A /* LGChatClientViewControllerNew.m in Sources */,
 				FF0B22E719053AC0001A8D80 /* Chat.xcdatamodeld in Sources */,
 				FF0B22E019053AC0001A8D80 /* main.m in Sources */,
+				FFF7AFA919081EFB00CE75AF /* LGMessageStore.m in Sources */,
 				FF0B22E419053AC0001A8D80 /* LGAppDelegate.m in Sources */,
 				FFF7AFA01908019600CE75AF /* Message.m in Sources */,
 				FF5EE894190682220022910A /* UIBubbleHeaderTableViewCell.m in Sources */,

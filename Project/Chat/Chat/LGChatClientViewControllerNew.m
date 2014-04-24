@@ -12,6 +12,7 @@
 #import "NSBubbleData.h"
 @import CoreData;
 #import "Message.h"
+#import "LGMessageStore.h"
 
 
 @interface LGChatClientViewControllerNew ()
@@ -25,46 +26,14 @@
 
 NSMutableArray *bubbleData;
 
--(NSString *)itemArchivePath{
-    
-    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    
-    NSString *documentDirectory = [documentDirectories firstObject];
-    
-    return [documentDirectory stringByAppendingPathComponent:@"message.data"];
-    
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    _model = [NSManagedObjectModel mergedModelFromBundles:nil];
+
     
-    NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc]initWithManagedObjectModel:_model];
-    
-    NSString *path = self.itemArchivePath;
-    
-    NSURL *storeURL = [NSURL fileURLWithPath:path];
-    
-    NSError *error = nil;
-    
-    if(![psc addPersistentStoreWithType:NSSQLiteStoreType
-                          configuration:nil
-                                    URL:storeURL
-                                 options:nil
-                                   error:&error]){
-        @throw [NSException exceptionWithName:@"OpenFailure"
-                                       reason:[error localizedDescription]
-                                     userInfo:nil];
-    }
-    
-    _context = [[NSManagedObjectContext alloc]init];
-    _context.persistentStoreCoordinator = psc;
-    
-    [self loadAllItems];
-    
-    //[self getNewMessages];
+    [self getNewMessages];
     
     _messageText.delegate = self;
     
@@ -87,7 +56,7 @@ NSMutableArray *bubbleData;
     //    - NSBubbleTypingTypeMe - shows "now typing" bubble on the right
     //    - NSBubbleTypingTypeNone - no "now typing" bubble
     
-    _bubbleTable.typingBubble = NSBubbleTypingTypeSomebody;
+   // _bubbleTable.typingBubble = NSBubbleTypingTypeSomebody;
     
     
     //[self.bubbleTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tblBubbleCell"];
@@ -100,44 +69,9 @@ NSMutableArray *bubbleData;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
 }
 
--(BOOL)saveChanged{
-    
-    NSError *error;
-    BOOL successful = [self.context save:&error];
-    
-    if(!successful){
-        NSLog(@"Error saving: %@", [error localizedDescription]);
-    }
-    return successful;
-    
-}
 
--(void)loadAllItems{
-    
-    if(!messages){
-        
-        NSLog(@"load messages");
-        
-        NSFetchRequest *request = [[NSFetchRequest alloc]init];
-        
-        NSEntityDescription *e = [NSEntityDescription entityForName:@"Message" inManagedObjectContext:self.context];
-        
-        request.entity = e;
-        
-        NSError *error;
-        
-        NSArray *result = [self.context executeFetchRequest:request error:&error];
-        
-        if(!result){
-            [NSException raise:@"Fetch failed"
-                        format:@"Reason %@", [error localizedDescription]];
-            
-        }
-        messages = [[NSMutableArray alloc]initWithArray:result];
-        
-        
-    }
-}
+
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -217,9 +151,7 @@ NSMutableArray *bubbleData;
     
     if([_messageText.text length] >0){
         
-        Message *message = [NSEntityDescription insertNewObjectForEntityForName:@"Message" inManagedObjectContext:self.context];
         
-        [messages addObject:message]; 
         
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
         
@@ -256,6 +188,7 @@ NSMutableArray *bubbleData;
 
 -(void)getNewMessages{
     
+    NSLog(@"get new messages");
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
     
@@ -309,8 +242,26 @@ didStartElement:(NSString *)elementName
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName
   namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     if ( [elementName isEqualToString:@"message"] ) {
-        [messages addObject:[NSDictionary dictionaryWithObjectsAndKeys:msgAdded,
-                             @"added",msgUser,@"user",msgText,@"text",nil]];
+        
+        Message *message= [[LGMessageStore sharedStore]createMessage];
+        
+        message.message = msgText;
+        
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+        [dateFormat setDateFormat:@"yyyy-M-d HH:mm:ss"];
+        
+        NSDate *date =  [dateFormat dateFromString:msgAdded];
+
+        message.message_date =  date;
+
+        
+        NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+        [f setNumberStyle:NSNumberFormatterDecimalStyle];
+     
+        NSNumber *num = [NSNumber numberWithInt:msgId];
+
+        message.message_id = num;
+        message.user_name = msgUser;
         
         lastId = msgId;
 
@@ -353,10 +304,7 @@ didStartElement:(NSString *)elementName
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    
-    
-    messages = [[NSMutableArray alloc]init];
-    
+
     
     chatParser = [[NSXMLParser alloc]initWithData:receivedData];
     
@@ -367,32 +315,21 @@ didStartElement:(NSString *)elementName
     
     bubbleData = [[NSMutableArray alloc]init];
     
-    for(NSDictionary *d in messages){
-        
-        
-        NSString *str = [d objectForKey:@"text"];
-        
-        NSString *user = [d objectForKey:@"user"];
-        
-        NSString *added = [d objectForKey:@"added"];
-        
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-        [dateFormat setDateFormat:@"yyyy-M-d HH:mm:ss"];
-        
-        NSDate *date =  [dateFormat dateFromString:added];
+    
 
-        
+    for(Message *message in [[LGMessageStore sharedStore]allMessages]){
+
         NSBubbleData *bubble;
         
-        if([user isEqualToString:@"counsellor"]){
+        if([message.user_name isEqualToString:@"counsellor"]){
             
-            bubble = [NSBubbleData dataWithText:str date:date type:BubbleTypeSomeoneElse];
+            bubble = [NSBubbleData dataWithText:message.message date:message.message_date type:BubbleTypeSomeoneElse];
             bubble.avatar = [UIImage imageNamed:@"avatar-1.jpg"];
         }
         else
         {
 
-            bubble = [NSBubbleData dataWithText:str date:date type:BubbleTypeMine];
+            bubble = [NSBubbleData dataWithText:message.message date:message.message_date type:BubbleTypeMine];
             bubble.avatar = nil;
         }
 
