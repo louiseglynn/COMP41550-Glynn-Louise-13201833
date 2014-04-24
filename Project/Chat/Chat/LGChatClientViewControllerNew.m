@@ -33,9 +33,9 @@ NSMutableArray *bubbleData;
 {
     [super viewDidLoad];
 
-    [self showMessages];
+    [self loadCoreDataMessages];
     
-    //[self getNewMessages];
+    [self getServerMessages];
     
     
     _messageText.delegate = self;
@@ -77,8 +77,8 @@ NSMutableArray *bubbleData;
 {
     self.bubbleTable.typingBubble = NSBubbleTypingTypeNobody;
     
-    NSBubbleData *sayBubble = [NSBubbleData dataWithText:self.messageText.text date:[NSDate dateWithTimeIntervalSinceNow:0] type:BubbleTypeMine];
-    [bubbleData addObject:sayBubble];
+    /*NSBubbleData *sayBubble = [NSBubbleData dataWithText:self.messageText.text date:[NSDate dateWithTimeIntervalSinceNow:0] type:BubbleTypeMine];
+    [bubbleData addObject:sayBubble];*/
 
     
     if([_messageText.text length] >0){
@@ -99,8 +99,10 @@ NSMutableArray *bubbleData;
         
         [NSURLConnection connectionWithRequest:request delegate:self];
         
-        [self getNewMessages];
+        [self getServerMessages];
     }
+    
+   
     
     //[self.bubbleTable reloadData];
     self.messageText.text = @"";
@@ -116,21 +118,13 @@ NSMutableArray *bubbleData;
     
 }
 
--(void)showMessages{
-    
-    //NSLog(@"show messages");
-    
+-(void)loadCoreDataMessages{
+
     bubbleData = [[NSMutableArray alloc]init];
 
-    //NSLog(@"%@",  [[LGMessageStore sharedStore]allMessages]);
-    
-    
     
     for(Message *message in [[LGMessageStore sharedStore]allMessages]){
         
-        //NSLog(@"%@", message);
-        
-        //NSLog(@"display message");
         
         NSBubbleData *bubble;
         
@@ -153,24 +147,23 @@ NSMutableArray *bubbleData;
         
         
     }
-    NSLog(@"%@", bubbleData);
-    
+
+
     [self.bubbleTable reloadData];
-    
-    
-    
+
 }
 
--(void)getNewMessages{
-    
-    NSLog(@"id=%d", lastId);
+-(void)getServerMessages{
+
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
     NSString *str = [[NSString alloc]init];
     
     
     if(lastId!=0){
-        str = [NSString stringWithFormat:@"http://louiseglynn.com/chat/meessages.php?id=%d", lastId];
+        
+        str = [NSString stringWithFormat:@"http://louiseglynn.com/chat/messages.php?id=%d", lastId];
+
     }
     else{
         str = [NSString stringWithFormat:@"http://louiseglynn.com/chat/messages.php"];
@@ -193,12 +186,10 @@ didStartElement:(NSString *)elementName
   namespaceURI:(NSString *)namespaceURI
  qualifiedName:(NSString *)qName
     attributes:(NSDictionary *)attributeDict {
-    
-    //NSLog(@"did start parsing");
+   
     
     if ( [elementName isEqualToString:@"message"] ) {
 
-        //NSLog(@"message");
         msgAdded = [attributeDict objectForKey:@"added"];
         msgId = [[attributeDict objectForKey:@"id"] intValue];
         msgUser = [[NSMutableString alloc] init];
@@ -225,9 +216,10 @@ didStartElement:(NSString *)elementName
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName
   namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
+
+    
     if ( [elementName isEqualToString:@"message"] ) {
-        
-        //NSLog(@"parsing");
+
         
         Message *message= [[LGMessageStore sharedStore]createMessage];
         
@@ -248,8 +240,6 @@ didStartElement:(NSString *)elementName
 
         message.message_id = num;
         message.user_name = msgUser;
-        
-        //NSLog(@"%@", message);
         
         lastId = msgId;
 
@@ -292,18 +282,18 @@ didStartElement:(NSString *)elementName
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    
-    //NSLog(@"did finish loading");
-    
+
     chatParser = [[NSXMLParser alloc]initWithData:receivedData];
     
     
     [chatParser setDelegate:self];
     [chatParser parse];
     
-    //NSLog(@"did finish parsing");
 
-    [self showMessages];
+
+    //[[LGMessageStore sharedStore]saveChanges];
+
+    [self loadCoreDataMessages];
 
     
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:@selector(timerCallback)]];
@@ -318,7 +308,7 @@ didStartElement:(NSString *)elementName
 
 -(void)timerCallback{
     
-    [self getNewMessages];
+    [self getServerMessages];
 };
 
 
@@ -331,13 +321,11 @@ didStartElement:(NSString *)elementName
 
 - (NSInteger)rowsForBubbleTable:(UIBubbleTableView *)tableView
 {
-    NSLog(@"being called");
     return [bubbleData count];
 }
 
 - (NSBubbleData *)bubbleTableView:(UIBubbleTableView *)tableView dataForRow:(NSInteger)row
 {
-    NSLog(@"%@", [bubbleData objectAtIndex:row]);
     return [bubbleData objectAtIndex:row];
 }
 

@@ -135,7 +135,6 @@
 
 -(void)loadAllMessages{
     
-   // NSLog(@"load messages");
     
     if(!self.privateMessages){
         
@@ -155,12 +154,10 @@
              
             
         }
-        
-        
+
         
         self.privateMessages = [[NSMutableArray alloc]initWithArray:result];
-        
-        //NSLog(@"%@", self.privateMessages);
+
     }
     
     
