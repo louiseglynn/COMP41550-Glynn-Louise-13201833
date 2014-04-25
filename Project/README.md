@@ -15,7 +15,6 @@ If I was going live with this project I would implement over SSL for security en
 I would use an NSURLSession Delegate to authenticate by responding with the username and password…..It wouldn’t have involved much change to my code - I would have just had to implement the NSURLSessionDataDelegate method to handle the authentication challenge…
 I would have had to pay for SSL certificate from my hosting provider and didn’t think I really needed to go that far with this project.
 
-I didn’t implement core data because I didn’t have time - I implemented core data in an example in my examples folder and for assignment 3 so with the lack of time I decided I wouldn’t benefit so much myself from doing this at this point….
 
 I didn’t implement registration because I wouldn’t have learned anything new and I didn’t have the time.
 
