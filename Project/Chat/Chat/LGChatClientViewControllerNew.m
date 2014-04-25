@@ -28,24 +28,6 @@
 
 NSMutableArray *bubbleData;
 
-/*- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    
-    NSInteger numRows =[self.bubbleTable tableView:tableView numberOfRowsInSection:section];
-    
-    return numRows;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [self.bubbleTable tableView:tableView cellForRowAtIndexPath:indexPath];
-    return cell;
-}*/
-
-
-
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
