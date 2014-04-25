@@ -164,7 +164,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <sections>
-                                    <tableViewSection id="PMr-rL-fbO">
+                                    <tableViewSection id="LXI-Xw-Ly3">
                                         <cells>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tblBubbleCell" id="3ki-Da-oPT">
                                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>

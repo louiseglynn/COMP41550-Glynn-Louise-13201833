@@ -10,7 +10,7 @@
 #import "UIBubbleTableViewDataSource.h"
 
 
-@interface LGChatClientViewControllerNew : UIViewController<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, NSXMLParserDelegate, UIBubbleTableViewDataSource>{
+@interface LGChatClientViewControllerNew : UIViewController<UITextFieldDelegate, UIBubbleTableViewDataSource, UITableViewDelegate, NSXMLParserDelegate>{
 
 NSMutableData *receivedData;
 
